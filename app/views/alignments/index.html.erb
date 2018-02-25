@@ -1,0 +1,8 @@
+<h1>Alignments</h1>
+<div>
+  <ul>
+    <% @alignments.each do |alignment| %>
+      <li><%= link_to "#{alignment.axis} #{alignment.name}", alignment_path(alignment.id) %></li>
+    <% end %>
+  </ul>
+</div>

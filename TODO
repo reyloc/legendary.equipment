@@ -1,0 +1,44 @@
+Optimization once site is done
+	gzip compression
+	minify css
+	minify js
+Models
+	Armor
+	CustomArmor
+	Weapon
+	CustomWeapon
+	WeaponSpecial
+	Gear
+	CustomGear
+	EquipmentPack
+	EquipmentType
+	Background
+	BackgroundExtra
+	BackgroundVariant
+	CustomBackground
+	Trait
+	Ideal
+	Bond
+	Flaw
+	Alignment
+	Language
+	CustomLanguage
+	Feat
+	CustomFeat
+	Skill
+	User - handled by devise mostly
+	Race
+	CustomRace
+	Character
+	CharacterStat
+	CharacterDetail
+	Class
+	CustomClass
+	ClassPath
+	CustomClassPath
+	ClassLeveling
+	CustomClassLeveling
+	Feature
+	CustomFeature
+	Spell
+	CustomSpell

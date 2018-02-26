@@ -1,0 +1,8 @@
+<h1>Backgrounds</h1>
+<div>
+  <ul>
+    <% @backgrounds.each do |background| %>
+      <li><%= link_to background.name, background_path(background.id) %>
+    <% end %>
+  </ul>
+</div>

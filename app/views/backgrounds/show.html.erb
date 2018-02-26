@@ -1,0 +1,138 @@
+<h1><%= @background.name %></h1>
+<div>
+  <h3>Feature: <%= @feature.name %></h3>
+  <%= @feature.description %>
+  <% if @feature.table.to_h.keys.length > 0 %>
+    <div style='margin-top: 25px;'>
+      <table class='table table-striped table-hover'>
+        <thead>
+          <tr>
+            <% @feature.table.to_h['headers'].each do |head| %>
+              <th><%= head %></th>
+            <% end %>
+          </tr>
+        </thead>
+        <tbody>
+          <% @feature.table.to_h['rows'].each do |row| %>
+            <tr>
+              <% row.each do |r| %>
+                <td><%= r %></td>
+              <% end %>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  <% end %>
+</div>
+<div class='attribute-border'></div>
+<% BackgroundExtra.where(:background_id => @background.id).each do |bge| %>
+  <div style='margin-top: 25px;'>
+    <h3><%= bge.name %></h3>
+    <%= bge.description %>
+    <% if bge.values.to_h.keys.length > 0 %>
+      <div style='margin-top: 25px;'>
+        <table class='table table-striped table-hover'>
+          <thead>
+            <tr>
+              <% bge.table.to_h['headers'].each do |head| %>
+                <th><%= head %></th>
+              <% end %>
+            </tr>
+          </thead>
+          <tbody>
+            <% bge.table.to_h['rows'].each do |row| %>
+              <tr>
+                <% row.each do |r| %>
+                  <td><%= r %></td>
+                <% end %>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+    <% end %>
+  </div>
+  <div class='attribute-border'></div>
+<% end %>
+</div>
+<div style='margin-top: 25px;'>
+  <h3>Traits</h3>
+  <table class='table table-striped table-hover'>
+    <thead>
+      <tr>
+        <th>Die Roll</th>
+        <th>Personality Trait</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% PersonalityTrait.where(:background_id => @background.id).each do |trait| %>
+        <tr>
+          <td><%= trait.id %></td>
+          <td><%= trait.description %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+<div class='attribute-border'></div>
+<div style='margin-top: 25px;'>
+  <h3>Ideals</h3>
+  <table class='table table-striped table-hover'>
+    <thead>
+      <tr>
+        <th>Die Roll</th>
+        <th>Ideal</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% Ideal.where(:background_id => @background.id).each do |ideal| %>
+        <tr>
+          <td><%= ideal.id %></td>
+          <td><b><%= ideal.name %></b> - <%= ideal.description %> (<%= (ideal.alignment.length > 0 ? ideal.alignment.join(', ') : 'Any') %>)</td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+<div class='attribute-border'></div>
+<div style='margin-top: 25px;'>
+  <h3>Bonds</h3>
+  <table class='table table-striped table-hover'>
+    <thead>
+      <tr>
+        <th>Die Roll</th>
+        <th>Bond</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% Bond.where(:background_id => @background.id).each do |bond| %>
+        <tr>
+          <td><%= bond.id %></td>
+          <td><b><%= bond.description %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+<div class='attribute-border'></div>
+<div style='margin-top: 25px;'>
+  <h3>Flaws</h3>
+  <table class='table table-striped table-hover'>
+    <thead>
+      <tr>
+        <th>Die Roll</th>
+        <th>Flaw</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% Flaw.where(:background_id => @background.id).each do |flaw| %>
+        <tr>
+          <td><%= flaw.id %></td>
+          <td><b><%= flaw.description %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+<div class='attribute-border'></div>

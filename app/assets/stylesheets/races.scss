@@ -1,0 +1,15 @@
+// Place all the styles related to the Races controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.attribute-border {
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+.attribute-border:after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 80%;
+  left: 10%;
+  border-bottom: 1px solid black;
+}

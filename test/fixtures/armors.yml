@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  type: one
+  cost: 1
+  currency: MyString
+  description: MyText
+  image: MyString
+  AC: 1
+  AC_modifier: MyString
+  AC_modifier_max: 1
+  strength: 1
+  strength_disadvantage: false
+  weigh: 1.5
+
+two:
+  name: MyString
+  type: two
+  cost: 1
+  currency: MyString
+  description: MyText
+  image: MyString
+  AC: 1
+  AC_modifier: MyString
+  AC_modifier_max: 1
+  strength: 1
+  strength_disadvantage: false
+  weigh: 1.5

@@ -1,0 +1,8 @@
+<h1>Languages</h1>
+<div>
+  <ul>
+    <% @languages.each do |language| %>
+      <li><%= link_to language.name, language_path(language.id) %></li>
+    <% end %>
+  </ul>
+</div>

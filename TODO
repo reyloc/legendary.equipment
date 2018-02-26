@@ -12,22 +12,11 @@ Models
 	CustomGear
 	EquipmentPack
 	EquipmentType
-	Background
-	BackgroundExtra
 	BackgroundVariant
 	CustomBackground
-	Trait
-	Ideal
-	Bond
-	Flaw
-	Alignment
-	Language
 	CustomLanguage
-	Feat
 	CustomFeat
-	Skill
 	User - handled by devise mostly
-	Race
 	CustomRace
 	Character
 	CharacterStat
@@ -39,6 +28,20 @@ Models
 	ClassLeveling
 	CustomClassLeveling
 	Feature
+		develop show page
 	CustomFeature
 	Spell
 	CustomSpell
+
+Add Content to
+	Feats
+	Races
+	Traits
+        Features
+        Backgrounds
+	Traits
+	Ideal
+	Bonds
+	Flaws
+Action cable for chat
+	http://guides.rubyonrails.org/action_cable_overview.html

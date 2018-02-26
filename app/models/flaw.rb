@@ -1,0 +1,2 @@
+class Flaw < ApplicationRecord
+end

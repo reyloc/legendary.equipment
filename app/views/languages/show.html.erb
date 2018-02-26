@@ -1,0 +1,30 @@
+<h1><%= @language.name %></h1>
+<div>
+  <%= @language.description %>
+</div>
+<div style='margin-top: 25px;'>
+  <table class='table table-striped table-bordered language-table'>
+    <tbody>
+      <tr>
+        <% ('a'..'m').each do |item| %>
+          <td><%= item.capitalize %></td>
+        <% end %>
+      </tr>
+      <tr>
+        <% ('a'..'m').each do |item| %>
+          <td class='<%= @language.html_class %>'><%= item %></td>
+        <% end %>
+      </tr>
+      <tr>
+        <% ('n'..'z').each do |item| %>
+          <td><%= item.capitalize %></td>
+        <% end %>
+      </tr>
+      <tr>
+        <% ('n'..'z').each do |item| %>
+          <td class='<%= @language.html_class %>'><%= item.capitalize %></td>
+        <% end %>
+      </tr>
+    </tbody>
+  <table>
+</div>

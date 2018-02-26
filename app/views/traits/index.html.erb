@@ -1,0 +1,8 @@
+<h1>Traits</h1>
+<div>
+  <ul>
+    <% @traits.each do |trait| %>
+      <li><%= link_to trait.name, trait_path(trait.id) %></li>
+    <% end %>
+  </ul>
+</div>

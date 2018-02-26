@@ -1,0 +1,8 @@
+<h1>Armor</h1>
+<div>
+  <ul>
+    <% @armors.each do |armor| %>
+      <li><%= link_to armor.name, armor_path(armor.id) %></li>
+    <% end %>
+  </ul>
+</div>

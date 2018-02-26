@@ -1,0 +1,19 @@
+<h1><%= @feat.name %></h1>
+<div>
+  <h3>Description</h3>
+  <%= @feat.description %>
+</div>
+<div>
+  <h3>Prerequisite</h3>
+  <ul>
+    <li>Required Attribute: <%= @feat.prereq_attribute %></li>
+    <li>Minimum Required: <%= @feat.prereq_min %></li>
+    <li>Other Prerequisite: <%= @feat.prereq_other %></li>
+  </ul>
+  <h3>Benefits</h3>
+  <ul>
+    <% @feat.benefits.each do |bene| %>
+      <li><%= bene %></li>
+    <% end %>
+  </ul>
+</div>

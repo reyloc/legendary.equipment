@@ -1,0 +1,8 @@
+<h1>Feats</h1>
+<div>
+  <ul>
+    <% @feats.each do |feat| %>
+      <li><%= link_to feat.name, feat_path(feat.id) %></li>
+    <% end %>
+  </ul>
+</div>

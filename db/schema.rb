@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180227002227) do
+ActiveRecord::Schema.define(version: 20180227191809) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -101,6 +101,11 @@ ActiveRecord::Schema.define(version: 20180227002227) do
     t.integer "feats", array: true
     t.bigint "char_class_id"
     t.index ["char_class_id"], name: "index_class_paths_on_char_class_id"
+  end
+
+  create_table "components", force: :cascade do |t|
+    t.string "name"
+    t.text "description"
   end
 
   create_table "equipment_types", force: :cascade do |t|
@@ -197,6 +202,21 @@ ActiveRecord::Schema.define(version: 20180227002227) do
     t.string "name"
     t.string "attrib"
     t.text "description"
+  end
+
+  create_table "spells", force: :cascade do |t|
+    t.string "name"
+    t.integer "level"
+    t.string "spell_type"
+    t.integer "casting_time"
+    t.string "time_unit"
+    t.integer "components", array: true
+    t.string "duration"
+    t.text "description"
+    t.integer "range"
+    t.string "range_unit"
+    t.json "table"
+    t.json "materials"
   end
 
   create_table "tools", force: :cascade do |t|

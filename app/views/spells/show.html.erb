@@ -1,0 +1,31 @@
+<h1><%= @spell.name %></h1>
+<center>A <%= @spell.level.ordinalize %> level <%= @spell.spell_type %> spell</center>
+<div>
+  <h3>Description</h3>
+  <%= @spell.description %>
+</div>
+<div class='attribute-border'></div>
+  <h3>Details</h3>
+  <ul>
+    <li>Casting Time: <%= @spell.casting_time %> <%= @spell.time_unit %></li>
+    <li>Range: <%= @spell.range %> <%= @spell.range_unit %></li>
+    <li>Duration: <%= @spell.duration %></li>
+    <li>Components: <%= @spell.components.map {|c| Component.find(c).name}.join(', ') %></li>
+    <% if @spell.components.include? '3' %>
+      <li>Materials Needed:<ul>
+        <% @spell.materials.to_h['items'].each do |material| %>
+          <% if material['quantity'].is_a? 'Array' %>
+            <li>
+              <% material['quantity'].each_with_index do |q, i| %>
+                <%= q %> <%= material['choices'][i] %> <%= i == material['quantity'].length-1 ? '' : ' or ' %>
+              <% end %>
+            </li>
+          <% else %>
+            <li><%= material['quantity'] %> <% material['choices'].join(' or ') %></li>
+          <% end %>
+        <% end %>
+      </ul></li>
+    <% end %>
+  </ul>
+<div class='attribute-border'></div>
+

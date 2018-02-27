@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   resources 'languages', :except => [:update, :new, :edit, :destroy, :create]
   resources 'races', :except => [:update, :new, :edit, :destroy, :create]
   resources 'skills', :except => [:update, :new, :edit, :destroy, :create]
+  resources 'spells', :except => [:update, :new, :edit, :destroy, :create]
   resources 'traits', :except => [:update, :new, :edit, :destroy, :create]
   resources 'tools', :except => [:update, :new, :edit, :destroy, :create]
   resources 'weapons', :except => [:update, :new, :edit, :destroy, :create]

@@ -1,0 +1,8 @@
+<h1>Classes</h1>
+<div>
+  <ul>
+    <% @charclasses.each do |charclass| %>
+      <li><%= link_to charclass.name, char_class_path(charclass.id) %></li>
+    <% end %>
+  </ul>
+</div>

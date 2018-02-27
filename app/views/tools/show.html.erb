@@ -1,0 +1,13 @@
+<h1><%= @tool.name %></h1>
+<div>
+  <h3>Description</h3>
+  <%= @tool.description %>
+</div>
+<div class='attribute-border'></div>
+<div>
+  <h3>Stats</h3>
+  <ul>
+    <li>Weight: <%= @tool.weight %> lbs.</li>
+    <li>Cost: <%= @tool.cost %> <%= @tool.currency %></li>
+  </ul>
+</div>

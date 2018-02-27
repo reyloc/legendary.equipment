@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  feat_1: 1
+  feat_2: 1
+  feat_3: 1
+  feat_4: 1
+  feat_5: 1
+  feat_6: 1
+
+two:
+  name: MyString
+  feat_1: 1
+  feat_2: 1
+  feat_3: 1
+  feat_4: 1
+  feat_5: 1
+  feat_6: 1

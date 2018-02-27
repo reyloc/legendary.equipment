@@ -1,0 +1,116 @@
+<% features_to_desc = Array.new %>
+<h1><%= @charclass.name %></h1>
+<div class='text-center'>
+  <%= image_tag @charclass.image, class: 'rounded', alt: @charclass.name, size: '277x400' %>
+</div>
+<div class='attribute-border'></div>
+<div>
+  <h3>Description</h3>
+  <%= @charclass.description %>
+</div>
+<div class='attribute-border'></div>
+<div>
+  <h3>Biography</h3>
+  <%= @charclass.bio %>
+</div>
+<div class='attribute-border'></div>
+<div>
+  <h3>Stats</h3>
+  <ul>
+    <li>Primary Attribute: <%= @charclass.primary_ability %></li>
+    <li>Saving Throws: <%= @charclass.saving_throws.join(', ') %></li>
+    <li>Hit Points:<ul>
+      <li>Hit Dice: <%= @charclass.hit_dice %> per <%= @charclass.name %> level</li>
+      <li>At level 1: <%= @charclass.hp_at_first_level %> + <%= @charclass.hp_at_first_level_attribute %> modifier</li>
+      <li>At higher levels: <%= @charclass.hp_at_higher_levels %> (or <%= @charclass.hp_at_higher_levels_min %>) + <%= @charclass.hp_at_higher_levels_attribute %> modifier per <%= @charclass.name %> level</li>
+    </ul></li>
+    <li>Proficiencies:<ul>
+      <li>Weapon: <%= @charclass.weapon_prof.join(', ') %></li>
+      <li>Armor: <%= @charclass.armor_prof.join(', ') %></li>
+      <li>Tools: <%= @charclass.tool_prof.empty? ? 'None' : @charclass.tool_prof.join(', ') %></li>
+      <li>Skills: Any <%= @charclass.skill_prof %> from<ul>
+        <% @charclass.skill_prof_choices.each do |skill| %>
+          <li><%= Skill.find(skill).name %></li>
+        <% end %>
+      </ul></li>
+    </ul></li>
+  </ul>
+</div>
+<div class='attribute-border'></div>
+<div>
+  <h3>Starting Equipment</h3>
+  You may choose to start with <%= @charclass.fund_roll %>&times;<%= @charclass.fund_modifier %> GP or the following set:
+  <ul>
+    <% @charclass.starting_equipment.to_h['items'].each do |hash| %>
+      <li>
+        <% if hash['quantity'].kind_of? Array %>
+          <% hash['quantity'].each_with_index do |q, i| %>
+            <%= q %> <%= hash['choices'][i] %> <%= (i == hash['choices'].length-1 ? '' : 'or') %>
+          <% end %>
+        <% else %>
+          <%= hash['choices'].join(' or ') %>
+        <% end %>
+      </li>
+    <% end %>
+  </ul>
+</div>
+<div class='attribute-border'></div>
+<div>
+  <h3>Leveling</h3>
+  <table class='table table-striped table-hover'>
+    <thead>
+      <tr>
+        <th align='center'>Level</th>
+        <th align='center'>Prof Bonus</th>
+        <th>Features</th>
+        <% @levels.first.info.to_h.keys.each do |header| %>
+          <th><%= header.split('_').join(' ').titleize %></th>
+        <% end %>
+      </tr>
+    </thead>
+    <tbody>
+      <% @levels.each do |level| %>
+        <tr>
+          <td><%= level.level.ordinalize %></td>
+          <td><%= sprintf("%+d", level.prof_bonus) %></td>
+          <td>
+            <% level.features.each_with_index do |id, i| %>
+              <% feat = Feature.find(id) %>
+              <% features_to_desc.push(feat) %>
+              <%= link_to feat.name, feature_path(id) %><%= (i == level.features.length-1 ? '' : ', ') %>
+            <% end %>
+          </td>
+          <% level.info.to_h.each do |k,v| %>
+            <td><%= v %></td>
+          <% end %>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+<div class='attribute-border'></div>
+<div>
+  <h3>Paths</h3>
+  <% @paths.each do |path| %>
+    <div class='path'>
+      <div class='path_name'><%= path.name %></div>
+      <div class='path_desc'><%= path.description %></div>
+      Features<ul>
+        <% path.feats.each do |id| %>
+          <% feat = Feature.find(id) %>
+          <% features_to_desc.push(feat) %>
+          <li><%= link_to feat.name, feature_path(feat.id) %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+</div>
+<div class='attribute-border'></div>
+<div>
+  <h3>Short Feature Description</h3>
+  <ul>
+  <% features_to_desc.each do |feat| %>
+    <li><%= link_to feat.name, feature_path(feat.id) %>: <%== feat.description %></li>
+  <% end %>
+  </ul>
+</div>

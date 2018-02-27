@@ -1,0 +1,21 @@
+<h1><%= @weapon.name %></h1>
+<div class='text-center'>
+  <%= image_tag @weapon.image, class: 'rounded', alt: @weapon.name, size: '150x200' %>
+</div>
+<div class='attribute-border'></div>
+<div>
+  <h3>Stats</h3>
+  <ul>
+    <li>Damage: <%= @weapon.damage %> <%= @weapon.damage_type %></li>
+    <li>Type: <%= EquipmentType.find(@weapon.equipment_type_id).name %></li>
+    <li>Cost: <%= @weapon.cost %> <%= @weapon.currency %></li>
+    <li>Weight: <%= @weapon.weight %> lbs.</li>
+    <li>Properties:<ul>
+      <% @weapon.properties.each do |prop| %>
+        <% property = WeaponProperty.find(prop) %>
+        <li><span title='<%= property.description %>'><%= property.name %></span></li>
+      <% end %>
+    </ul></li>
+  </ul>
+</div>
+

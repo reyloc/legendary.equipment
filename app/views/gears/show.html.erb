@@ -1,0 +1,17 @@
+<h1><%= @gear.name %></h1>
+<div class='text-center'>
+  <%= image_tag @gear.image, class: 'rounded', alt: @gear.name, size: '150x200' %>
+</div>
+<div class='attribute-border'></div>
+<div>
+  <h3>Description</h3>
+  <%= @gear.description %>
+<div>
+  <h3>Stats</h3>
+  <ul>
+    <li>Type: <%= EquipmentType.find(@gear.equipment_type_id).name %></li>
+    <li>Cost: <%= @gear.cost %> <%= @gear.currency %></li>
+    <li>Weight: <%= @gear.weight %> lbs.</li>
+  </ul>
+</div>
+

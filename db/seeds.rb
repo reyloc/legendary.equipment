@@ -256,7 +256,44 @@ Feature.create([
   {:name => 'Shelter of the Faithful',
    :description => 'As an acolyte, you command the respect of those who share your faith, and you can perform the religious ceremonies of your deity. You and your adventuring companions can expect to receive free healing and care at a temple, shrine, or other established presence of your faith, though you must provide any material components needed for spells. Those who share your religion will support you (but only you) at a modest lifestyle. You might also have ties to a specific temple dedicated to your chosen deity or pantheon, and you have a residence there, This could be the temple where you used to serve, if you remain on good terms with it, or a temple where you have found a new home, While near your temple, you can call upon the priests for assistance, provided the assistance you ask for is not hazardous and you remain in good standing with your temple.',
    :table => {},
-   :race_id => ''
+   :race_id => '',
+   :class_id => '',
+  },
+  {:name => 'Frenzy',
+   :description => 'Starting when you choose this path at level 3, you can go into a frenzy when you rage. If you do so, for the duration of your rage you can make a single melee weapon attack as a bonus action on each of your turns after this one. When your rage ends, you suffer one level of exhaustion.',
+   :table => {},
+   :race_id => '',
+   :class_id => 1
+  },
+  {:name => 'Mindless Rage',
+   :description => "Beginning at the 6th level, you can't be charmed or frightened while raging. If you are charm ed or frightened when you enter your rage, the effect is suspended for the duration of the rage.",
+   :table => {},
+   :race_id => '',
+   :class_id => 1
+  },
+  {:name => 'Intimidating Presence',
+   :description => "Beginning at the 10th level, you can use your action to frighten someone with your menacing presence. When you do so, choose one creature that you can see within 30 feet of you. If the creature can see or hear you, it must succeed on a Wisdom saving throw (DC equal to 8 + your proficiency bonus + your Charisma modifier) or be frightened of you until the end of your next turn. On subsequent turns, you can use your action to extend the duration of this effect on the frightened creature until the end of your next turn. This effect ends if the creature ends its turn out of line of sight or more than 60 feet away from you. If the creature succeeds on its saving throw, you can't use this feature on that creature again for 24 hours.",
+   :table => {},
+   :race_id => '',
+   :class_id => 1
+  },
+  {:name => 'Retaliation',
+   :description => 'Starting at the 14th level, when you take damage from a creature that is within 5 feet of you, you can use your reaction to make a melee weapon attack against that creature.',
+   :table => {},
+   :race_id => '',
+   :class_id => 1
+  },
+  {:name => 'Rage',
+   :description => "In battle, you fight with primal ferocity. On your turn, you can enter a rage as a bonus action. While raging, you gain the following benefits if you aren't wearing heavy armor:<ul><li>You have advantage on Strength checks and Strength saving throws.</li><li>When you make a melee weapon attack using Strength, you gain a bonus to the damage roll that increases as you gain levels as a barbarian, as shown in the Rage Damage column of the Barbarian table.</li><li>You have resistance to bludgeoning, piercing, and slashing damage.</li></ul>If you are able to cast spells, you can’t cast them or concentrate on them while raging. Your rage lasts for 1 minute. It ends early if you are knocked unconscious or if your turn ends and you haven’t attacked a hostile creature since your last turn or taken damage since then. You can also end your rage on your turn as a bonus action. Once you have raged the number of times shown for your barbarian level in the Rages column of the Barbarian table, you must finish a long rest before you can rage again.",
+   :table => {},
+   :race_id => '',
+   :class_id => 1
+  },
+  {:name => 'Unarmored Defense',
+   :description => "While you are not wearing any armor, your Arm or Class equals 10 + your Dexterity modifier + your Constitution modifier. You can use a shield and still gain this benefit.",
+   :table => {},
+   :race_id => '',
+   :class_id => 1
   }
 ])
 Background.create([
@@ -386,6 +423,12 @@ BackgroundExtra.create([
 EquipmentType.create([
   {:name => 'Light Armor',
    :description => 'Made from supple and thin materials, light armor favors agile adventurers since it offers some protection without sacrificing mobility. If you wear light armor, you add your Dexterity modifier to the base number from your armor type to determine your Armor Class.'
+  },
+  {:name => 'Simple Weapons',
+   :description => 'Weapons which require little to no training to use correctly and effectively.'
+  },
+  {:name => 'Adventuring Gear',
+   :description => 'Gear a traveling adventure might carry on their persons.'
   }
 ])
 Armor.create([
@@ -401,5 +444,86 @@ Armor.create([
    :strength => 0,
    :stealth_disadvantage => true,
    :weight => 8
+  }
+])
+WeaponProperty.create([
+  {:name => 'Light',
+   :description => 'Small and easy to handle, making it ideal for use when fighting with two weapons.'
+  }
+])
+Weapon.create([
+  {:name => 'Club',
+   :equipment_type_id => 2,
+   :cost => 1,
+   :currency => 'SP',
+   :damage => '1d4',
+   :damage_type => 'Bludgeoning',
+   :weight => 2,
+   :properties => [1],
+   :image => 'club.jpg',
+   :range => "",
+   :versatile => "",
+   :weapon_special_id => ''
+  }
+])
+Gear.create([
+  {:name => 'Abacus',
+   :cost => 2,
+   :currency => 'GP',
+   :weight => 2,
+   :equipment_type_id => 3,
+   :image => 'abacus.jpg',
+   :description => 'An oblong frame with rows of wires or grooves along which beads are slid, used for calculating.'
+  }
+])
+Tool.create([
+  {:name => "Alchemist's Tools",
+   :description => 'Tools required for basic alchemical acts',
+   :cost => 50,
+   :currency => 'GP',
+   :weight => 8,
+  }
+])
+CharClass.create([
+  {:name => 'Barbarian',
+   :description => 'A fierce warrior of primitive background who can enter a battle rage',
+   :image => 'barbarian.png',
+   :primary_ability => 'Str',
+   :bio => "A tall human tribesman strides through a blizzard, draped in fur and hefting his axe. He laughs as he charges toward the frost giant who dared poach his people's elk herd. A half-orc snarls at the latest challenger to her authority over their savage tribe, ready to break his neck with her bare hands as she did to the last six rivals. Frothing at the mouth, a dwarf slams his helmet into the face of his drow foe, then turns to drive his armored elbow into the gut of another. These barbarians, different as they might be, are defined by their rage: unbridled, unquenchable, and unthinking fury. More than a mere emotion, their anger is the ferocity of a cornered predator, the unrelenting",
+   :saving_throws => ['Str', 'Con'],
+   :hit_dice => '1d12',
+   :hp_at_first_level => 12,
+   :hp_at_first_level_attribute => 'Con',
+   :hp_at_higher_levels => '1d12',
+   :hp_at_higher_levels_min => 7,
+   :hp_at_higher_levels_attribute => 'Con',
+   :starting_equipment => {items: [
+     {quantity: 1, choices: ['Greataxe', 'Any Martial Weapon']},
+     {quantity: [2,1], choices: ['Handaxe', 'Any Simple Weapon']},
+     {quantity: 1, choices: ["Explorer's Pack"]},
+     {quantity: 4, choices: ["Javelin"]},
+   ]},
+   :armor_prof => ['Light Armor', 'Medium Armor', 'Shield'],
+   :weapon_prof => ['Simple Weapon', 'Martial Weapon'],
+   :skill_prof => 2,
+   :tool_prof => [],
+   :skill_prof_choices => [2, 4, 8, 11, 12, 18],
+   :fund_modifier => 10,
+   :fund_roll => '2d4'
+  }
+])
+ClassPath.create([
+  {:name => 'Path of the Berserker',
+   :description => "For some barbarians, rage is a means to an end - that end being violence. The Path of the Berserker is a path of untrammeled fury, slick with blood. As you enter the berserker's rage. you thrill in the chaos of battle, heedless of your own health or well-being.",
+   :feats => [2,3,4,5],
+   :char_class_id => 1
+  }
+])
+ClassLevel.create([
+  {:level => 1,
+   :prof_bonus => 2,
+   :features => [6, 7],
+   :info => {rages: 2, rage_damage: '+2'},
+   :char_class_id => 1
   }
 ])

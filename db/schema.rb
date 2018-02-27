@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180226150722) do
+ActiveRecord::Schema.define(version: 20180227002227) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,7 +23,7 @@ ActiveRecord::Schema.define(version: 20180226150722) do
 
   create_table "armors", force: :cascade do |t|
     t.string "name"
-    t.bigint "equipment_type_id"
+    t.integer "equipment_type_id"
     t.integer "cost"
     t.string "currency"
     t.text "description"
@@ -63,6 +63,46 @@ ActiveRecord::Schema.define(version: 20180226150722) do
     t.index ["background_id"], name: "index_bonds_on_background_id"
   end
 
+  create_table "char_classes", force: :cascade do |t|
+    t.string "name"
+    t.text "description"
+    t.string "image"
+    t.string "primary_ability"
+    t.text "bio"
+    t.text "saving_throws", array: true
+    t.string "hit_dice"
+    t.integer "hp_at_first_level"
+    t.string "hp_at_first_level_attribute"
+    t.string "hp_at_higher_levels"
+    t.integer "hp_at_higher_levels_min"
+    t.string "hp_at_higher_levels_attribute"
+    t.json "starting_equipment"
+    t.text "armor_prof", array: true
+    t.text "weapon_prof", array: true
+    t.integer "skill_prof"
+    t.integer "tool_prof", array: true
+    t.integer "skill_prof_choices", array: true
+    t.integer "fund_modifier"
+    t.string "fund_roll"
+  end
+
+  create_table "class_levels", force: :cascade do |t|
+    t.integer "level"
+    t.integer "prof_bonus"
+    t.integer "features", array: true
+    t.json "info"
+    t.bigint "char_class_id"
+    t.index ["char_class_id"], name: "index_class_levels_on_char_class_id"
+  end
+
+  create_table "class_paths", force: :cascade do |t|
+    t.string "name"
+    t.text "description"
+    t.integer "feats", array: true
+    t.bigint "char_class_id"
+    t.index ["char_class_id"], name: "index_class_paths_on_char_class_id"
+  end
+
   create_table "equipment_types", force: :cascade do |t|
     t.string "name"
     t.text "description"
@@ -81,6 +121,7 @@ ActiveRecord::Schema.define(version: 20180226150722) do
     t.string "name"
     t.text "description"
     t.integer "race_id"
+    t.integer "class_id"
     t.json "table"
   end
 
@@ -88,6 +129,17 @@ ActiveRecord::Schema.define(version: 20180226150722) do
     t.text "description"
     t.bigint "background_id"
     t.index ["background_id"], name: "index_flaws_on_background_id"
+  end
+
+  create_table "gears", force: :cascade do |t|
+    t.string "name"
+    t.integer "cost"
+    t.string "currency"
+    t.float "weight"
+    t.text "description"
+    t.string "image"
+    t.bigint "equipment_type_id"
+    t.index ["equipment_type_id"], name: "index_gears_on_equipment_type_id"
   end
 
   create_table "ideals", force: :cascade do |t|
@@ -147,6 +199,14 @@ ActiveRecord::Schema.define(version: 20180226150722) do
     t.text "description"
   end
 
+  create_table "tools", force: :cascade do |t|
+    t.string "name"
+    t.text "description"
+    t.float "weight"
+    t.integer "cost"
+    t.string "currency"
+  end
+
   create_table "traits", force: :cascade do |t|
     t.string "name"
     t.text "description"
@@ -155,13 +215,47 @@ ActiveRecord::Schema.define(version: 20180226150722) do
     t.index ["race_id"], name: "index_traits_on_race_id"
   end
 
+  create_table "weapon_properties", force: :cascade do |t|
+    t.string "name"
+    t.text "description"
+  end
+
+  create_table "weapon_specials", force: :cascade do |t|
+    t.string "name"
+    t.text "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "weapons", force: :cascade do |t|
+    t.string "name"
+    t.integer "cost"
+    t.string "currency"
+    t.string "damage"
+    t.string "damage_type"
+    t.float "weight"
+    t.string "range"
+    t.string "versatile"
+    t.string "image"
+    t.bigint "equipment_type_id"
+    t.bigint "weapon_special_id"
+    t.integer "properties", array: true
+    t.index ["equipment_type_id"], name: "index_weapons_on_equipment_type_id"
+    t.index ["weapon_special_id"], name: "index_weapons_on_weapon_special_id"
+  end
+
   add_foreign_key "armors", "equipment_types"
   add_foreign_key "background_extras", "backgrounds"
   add_foreign_key "backgrounds", "features"
   add_foreign_key "bonds", "backgrounds"
+  add_foreign_key "class_levels", "char_classes"
+  add_foreign_key "class_paths", "char_classes"
   add_foreign_key "flaws", "backgrounds"
+  add_foreign_key "gears", "equipment_types"
   add_foreign_key "ideals", "backgrounds"
   add_foreign_key "personality_traits", "backgrounds"
   add_foreign_key "races", "sizes"
   add_foreign_key "traits", "races"
+  add_foreign_key "weapons", "equipment_types"
+  add_foreign_key "weapons", "weapon_specials"
 end

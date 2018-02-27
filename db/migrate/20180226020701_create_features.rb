@@ -4,6 +4,7 @@ class CreateFeatures < ActiveRecord::Migration[5.1]
       t.string :name
       t.text :description
       t.integer :race_id
+      t.integer :class_id
       t.json :table
     end
   end

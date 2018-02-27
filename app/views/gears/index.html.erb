@@ -1,0 +1,8 @@
+<h1>Gears</h1>
+<div>
+  <ul>
+    <% @gears.each do |gear| %>
+      <li><%= link_to gear.name, gear_path(gear.id) %></li>
+    <% end %>
+  </ul>
+</div>

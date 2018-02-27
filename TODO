@@ -3,12 +3,8 @@ Optimization once site is done
 	minify css
 	minify js
 Models
-	Armor
 	CustomArmor
-	Weapon
 	CustomWeapon
-	WeaponSpecial
-	Gear
 	CustomGear
 	EquipmentPack
 	EquipmentType
@@ -21,11 +17,8 @@ Models
 	Character
 	CharacterStat
 	CharacterDetail
-	Class
 	CustomClass
-	ClassPath
 	CustomClassPath
-	ClassLeveling
 	CustomClassLeveling
 	Feature
 		develop show page
@@ -43,5 +36,13 @@ Add Content to
 	Ideal
 	Bonds
 	Flaws
+	Armor
+	Weapon
+	WeaponProperty
+	WeaponSpecial
+	Gear
+	CharClass
+	CharPath
+	CharLevel
 Action cable for chat
 	http://guides.rubyonrails.org/action_cable_overview.html

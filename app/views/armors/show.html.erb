@@ -1,7 +1,21 @@
 <h1><%= @armor.name %></h1>
 <div class='text-center'>
-  <%= image_tag @armor.image, class: 'rounded', alt: @armor.name, size: '277x400' %>
+  <%= image_tag @armor.image, class: 'rounded', alt: @armor.name, size: '150x200' %>
 </div>
 <div class='attribute-border'></div>
 <div>
+  <h3>Description</h3>
+  <%= @armor.description %>
+</div>
+<div class='attribute-border'></div>
+<div>
+  <h3>Stats</h3>
+  <ul>
+    <li>Armor Class: <%= @armor.AC %> + <%= @armor.AC_modifier %> (max <%= @armor.AC_modifier_max %>)</li>
+    <li>Type: <%= EquipmentType.find(@armor.equipment_type_id).name %></li>
+    <li>Cost: <%= @armor.cost %> <%= @armor.currency %></li>
+    <li>Strength Required: <%= @armor.strength %></li>
+    <li>Stealth Disadvantage: <%= @armor.stealth_disadvantage ? 'Yes' : 'No' %></li>
+    <li>Weight: <%= @armor.weight %> lbs.</li>
+  </ul>
 </div>

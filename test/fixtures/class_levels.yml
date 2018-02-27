@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  level: 1
+  prof_bonus: 1
+  features: MyText
+  info: 
+
+two:
+  level: 1
+  prof_bonus: 1
+  features: MyText
+  info: 

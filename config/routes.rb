@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   get 'home/index'
   resources 'alignments', :except => [:update, :new, :edit, :destroy, :create]
   resources 'armors', :except => [:update, :new, :edit, :destroy, :create]

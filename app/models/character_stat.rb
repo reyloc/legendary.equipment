@@ -1,0 +1,2 @@
+class CharacterStat < ApplicationRecord
+end

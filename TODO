@@ -10,16 +10,10 @@ Models
 	CustomBackground
 	CustomLanguage
 	CustomFeat
-	User - handled by devise mostly
 	CustomRace
-	Character
-	CharacterStat
-	CharacterDetail
 	CustomClass
 	CustomClassPath
 	CustomClassLeveling
-	Feature
-		develop show page
 	CustomFeature
 	CustomSpell
 
@@ -42,5 +36,12 @@ Add Content to
 	CharPath
 	CharLevel
 	Spell
+
+Make views for
+	Character
+		new
+		edit
+		delete
+
 Action cable for chat
 	http://guides.rubyonrails.org/action_cable_overview.html

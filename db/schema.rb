@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180227235208) do
+ActiveRecord::Schema.define(version: 20180228002741) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -84,6 +84,56 @@ ActiveRecord::Schema.define(version: 20180227235208) do
     t.integer "skill_prof_choices", array: true
     t.integer "fund_modifier"
     t.string "fund_roll"
+  end
+
+  create_table "character_details", force: :cascade do |t|
+    t.bigint "character_id"
+    t.integer "languages", array: true
+    t.json "death_saves"
+    t.integer "flaws", array: true
+    t.integer "bonds", array: true
+    t.integer "ideals", array: true
+    t.integer "alignment"
+    t.json "equipment"
+    t.integer "feats", array: true
+    t.integer "traits", array: true
+    t.json "skills"
+    t.json "multiclass"
+    t.string "sex", limit: 1
+    t.json "background_extras"
+    t.index ["character_id"], name: "index_character_details_on_character_id"
+  end
+
+  create_table "character_stats", force: :cascade do |t|
+    t.bigint "character_id"
+    t.integer "str"
+    t.integer "dex"
+    t.integer "con"
+    t.integer "int"
+    t.integer "wis"
+    t.integer "cha"
+    t.integer "level"
+    t.integer "experience"
+    t.integer "inspiration"
+    t.integer "hp"
+    t.integer "max_hp"
+    t.integer "temp_hp"
+    t.index ["character_id"], name: "index_character_stats_on_character_id"
+  end
+
+  create_table "characters", force: :cascade do |t|
+    t.bigint "user_id"
+    t.string "name"
+    t.bigint "race_id"
+    t.bigint "char_class_id"
+    t.bigint "background_id"
+    t.text "story"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["background_id"], name: "index_characters_on_background_id"
+    t.index ["char_class_id"], name: "index_characters_on_char_class_id"
+    t.index ["race_id"], name: "index_characters_on_race_id"
+    t.index ["user_id"], name: "index_characters_on_user_id"
   end
 
   create_table "class_levels", force: :cascade do |t|
@@ -288,6 +338,12 @@ ActiveRecord::Schema.define(version: 20180227235208) do
   add_foreign_key "background_extras", "backgrounds"
   add_foreign_key "backgrounds", "features"
   add_foreign_key "bonds", "backgrounds"
+  add_foreign_key "character_details", "characters"
+  add_foreign_key "character_stats", "characters"
+  add_foreign_key "characters", "backgrounds"
+  add_foreign_key "characters", "char_classes"
+  add_foreign_key "characters", "races"
+  add_foreign_key "characters", "users"
   add_foreign_key "class_levels", "char_classes"
   add_foreign_key "class_paths", "char_classes"
   add_foreign_key "flaws", "backgrounds"

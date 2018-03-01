@@ -35,13 +35,13 @@
         <table class='table table-striped table-hover'>
           <thead>
             <tr>
-              <% bge.table.to_h['headers'].each do |head| %>
+              <% bge.values.to_h['headers'].each do |head| %>
                 <th><%= head %></th>
               <% end %>
             </tr>
           </thead>
           <tbody>
-            <% bge.table.to_h['rows'].each do |row| %>
+            <% bge.values.to_h['rows'].each do |row| %>
               <tr>
                 <% row.each do |r| %>
                   <td><%= r %></td>
@@ -55,7 +55,43 @@
   </div>
   <div class='attribute-border'></div>
 <% end %>
-</div>
+<% bgv = BackgroundVariant.find_by_background_id(@background.id) %>
+<% unless bgv.nil? %>
+  <div>
+    <h3>Background Variant: <%= bgv.name %></h3>
+    <%= bgv.description %>
+  </div>
+  <div class='attribute-border'></div>
+<% end %>
+<% unless @variant_feature.nil? %>
+  <div>
+    <h3>Background Variant Feature: <%= @variant_feature.name %></h3>
+    <%= @variant_feature.description %>
+    <% if @variant_feature.table.to_h.keys.length > 0 %>
+      <div style='margin-top: 25px;'>
+        <table class='table table-striped table-hover'>
+          <thead>
+            <tr>
+              <% @variant_feature.table.to_h['headers'].each do |head| %>
+                <th><%= head %></th>
+              <% end %>
+            </tr>
+          </thead>
+          <tbody>
+            <% @variant_feature.table.to_h['rows'].each do |row| %>
+              <tr>
+                <% row.each do |r| %>
+                  <td><%= r %></td>
+                <% end %>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+    <% end %>
+  </div>
+  <div class='attribute-border'></div>
+<% end %>
 <div style='margin-top: 25px;'>
   <h3>Traits</h3>
   <table class='table table-striped table-hover'>

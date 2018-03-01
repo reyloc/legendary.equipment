@@ -9,7 +9,6 @@ class CharClassesController < ApplicationController
       @charclass = CharClass.find_by_name(params[:id])
     end
     @paths = ClassPath.where(:char_class_id => @charclass.id).order(:name)
-    #@levels = class_levels#ClassLevel.where(:char_class_id => @charclass.id).order(:level)
     @skills = Skill.all
     @features = Feature.where(:class_id => @charclass.id).order(:name)
   end

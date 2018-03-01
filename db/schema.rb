@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180228002741) do
+ActiveRecord::Schema.define(version: 20180301180003) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -43,6 +43,13 @@ ActiveRecord::Schema.define(version: 20180228002741) do
     t.text "description"
     t.json "values"
     t.index ["background_id"], name: "index_background_extras_on_background_id"
+  end
+
+  create_table "background_variants", force: :cascade do |t|
+    t.string "name"
+    t.text "description"
+    t.bigint "background_id"
+    t.index ["background_id"], name: "index_background_variants_on_background_id"
   end
 
   create_table "backgrounds", force: :cascade do |t|
@@ -313,8 +320,6 @@ ActiveRecord::Schema.define(version: 20180228002741) do
   create_table "weapon_specials", force: :cascade do |t|
     t.string "name"
     t.text "description"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
   create_table "weapons", force: :cascade do |t|
@@ -336,6 +341,7 @@ ActiveRecord::Schema.define(version: 20180228002741) do
 
   add_foreign_key "armors", "equipment_types"
   add_foreign_key "background_extras", "backgrounds"
+  add_foreign_key "background_variants", "backgrounds"
   add_foreign_key "backgrounds", "features"
   add_foreign_key "bonds", "backgrounds"
   add_foreign_key "character_details", "characters"

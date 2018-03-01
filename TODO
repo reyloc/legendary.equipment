@@ -6,7 +6,6 @@ Models
 	CustomArmor
 	CustomWeapon
 	CustomGear
-	BackgroundVariant
 	CustomBackground
 	CustomLanguage
 	CustomFeat
@@ -19,17 +18,13 @@ Models
 
 Add Content to
 	Feats
-	Traits
         Features
-        Backgrounds
-	Traits
 	Ideal
 	Bonds
 	Flaws
+	PersonalityTrait
 	Armor
 	Weapon
-	WeaponProperty
-	WeaponSpecial
 	Gear
 	CharClass
 	CharPath
@@ -44,3 +39,5 @@ Make views for
 
 Action cable for chat
 	http://guides.rubyonrails.org/action_cable_overview.html
+Character form
+	Fuel UX

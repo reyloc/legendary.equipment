@@ -50,7 +50,8 @@
 <div>
   <ul>
     <% @race.traits.each do |trait| %>
-      <li><%= link_to trait.name, trait_path(trait) %></li>
+      <% info = @traits.select{|t|t.name == trait}.first %>
+      <li><%= link_to info.name, trait_path(info) %></li>
     <% end %>
 </div>
 <div class='attribute-border'></div>

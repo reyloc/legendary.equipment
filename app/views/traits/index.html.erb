@@ -2,7 +2,7 @@
 <div>
   <ul>
     <% @traits.each do |trait| %>
-      <li><%= link_to trait.name, trait_path(trait.id) %></li>
+      <li><%= link_to "#{trait.name} (#{trait.race.name})", trait_path(trait.id) %></li>
     <% end %>
   </ul>
 </div>

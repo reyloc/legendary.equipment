@@ -30,7 +30,8 @@
       <li>Tools: <%= @charclass.tool_prof.empty? ? 'None' : @charclass.tool_prof.join(', ') %></li>
       <li>Skills: Any <%= @charclass.skill_prof %> from<ul>
         <% @charclass.skill_prof_choices.each do |skill| %>
-          <li><%= Skill.find(skill).name %></li>
+          <% info = @skills.select{|s|s.id == skill}.first %>
+          <li><%= link_to info.name, skill_path(info.id) %></li>
         <% end %>
       </ul></li>
     </ul></li>
@@ -63,24 +64,25 @@
         <th align='center'>Level</th>
         <th align='center'>Prof Bonus</th>
         <th>Features</th>
-        <% @levels.first.info.to_h.keys.each do |header| %>
+        <% @charclass.class_levels.first.info.to_h.keys.each do |header| %>
           <th><%= header.split('_').join(' ').titleize %></th>
         <% end %>
       </tr>
     </thead>
     <tbody>
-      <% @levels.each do |level| %>
+      <% @charclass.class_levels.each do |lvl| %>
         <tr>
-          <td><%= level.level.ordinalize %></td>
-          <td><%= sprintf("%+d", level.prof_bonus) %></td>
+          <td><%= lvl.level.ordinalize %></td>
+          <td><%= sprintf("%+d", lvl.prof_bonus) %></td>
           <td>
-            <% level.features.each_with_index do |id, i| %>
-              <% feat = Feature.find(id) %>
+            <% lvl.features.each_with_index do |id, i| %>
+
+              <% feat = @features.select{|f|f.id == id}.first %>
               <% features_to_desc.push(feat) %>
-              <%= link_to feat.name, feature_path(id) %><%= (i == level.features.length-1 ? '' : ', ') %>
+              <%= link_to feat.name, feature_path(id) %><%= (i == lvl.features.length-1 ? '' : ', ') %>
             <% end %>
           </td>
-          <% level.info.to_h.each do |k,v| %>
+          <% lvl.info.to_h.each do |k,v| %>
             <td><%= v %></td>
           <% end %>
         </tr>
@@ -97,7 +99,7 @@
       <div class='path_desc'><%= path.description %></div>
       Features<ul>
         <% path.feats.each do |id| %>
-          <% feat = Feature.find(id) %>
+          <% feat = @features.select{|f|f.id == id}.first %>
           <% features_to_desc.push(feat) %>
           <li><%= link_to feat.name, feature_path(feat.id) %></li>
         <% end %>

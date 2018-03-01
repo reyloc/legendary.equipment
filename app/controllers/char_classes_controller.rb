@@ -4,11 +4,13 @@ class CharClassesController < ApplicationController
   end
   def show
     begin
-      @charclass = CharClass.find(params[:id])
+      @charclass = CharClass.preload(:class_levels).find(params[:id])
     rescue ActiveRecord::RecordNotFound
       @charclass = CharClass.find_by_name(params[:id])
     end
     @paths = ClassPath.where(:char_class_id => @charclass.id).order(:name)
-    @levels = ClassLevel.where(:char_class_id => @charclass.id).order(:level)
+    #@levels = class_levels#ClassLevel.where(:char_class_id => @charclass.id).order(:level)
+    @skills = Skill.all
+    @features = Feature.where(:class_id => @charclass.id).order(:name)
   end
 end

@@ -24,7 +24,7 @@
       <% end %>
     </ul></li>
     <li>Age<ul><li><%= @race.age_info %></li></ul></li>
-    <li>Size: <%= Size.find(@race.size_id).name %></li>
+    <li>Size: <%= @race.size.name %></li>
     <li>Size Info:<ul><li><%= @race.size_info %></li></ul>
     <li>Height: <%= @race.base_height %>+<%= @race.height_mod %> inches</li>
     <li>Weight: <%= @race.base_weight %>&times;<%= @race.weight_mod %> lbs.</li>
@@ -50,7 +50,7 @@
 <div>
   <ul>
     <% @race.traits.each do |trait| %>
-      <li><%= link_to trait, trait_path(trait) %></li>
+      <li><%= link_to trait.name, trait_path(trait) %></li>
     <% end %>
 </div>
 <div class='attribute-border'></div>

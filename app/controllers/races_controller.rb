@@ -3,10 +3,7 @@ class RacesController < ApplicationController
     @races = Race.all.order(:name)
   end
   def show
-    begin
-      @race = Race.find(params[:id])
-    rescue ActiveRecord::RecordNotFound
-      @race = Race.find_by_name(params[:id])
-    end
+    @race = Race.preload(:size).find(params[:id])
+    @traits = Trait.where(:race_id => @race.id)
   end
 end

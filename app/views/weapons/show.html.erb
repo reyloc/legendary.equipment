@@ -10,7 +10,7 @@
     <li>Type: <%= EquipmentType.find(@weapon.equipment_type_id).name %></li>
     <li>Cost: <%= @weapon.cost %> <%= @weapon.currency %></li>
     <li>Weight: <%= @weapon.weight %> lbs.</li>
-    <li>Properties:<ul>
+    <li>Properties (hover over name for description):<ul>
       <% @weapon.properties.each do |prop| %>
         <% property = WeaponProperty.find(prop) %>
         <li><span title='<%= property.description %>'><%= property.name %></span></li>

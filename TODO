@@ -16,9 +16,10 @@ Models
 	CustomFeature
 	CustomSpell
 
-Add Content to
+Add Content to (assume all unless listed otherwise)
 	Feats
         Features
+		Done in parallel with classes
 	Ideal
 	Bonds
 	Flaws
@@ -27,10 +28,39 @@ Add Content to
 	Weapon
 	Gear
 	CharClass
+		Fighter
+		Monk
+		Paladin
+		Ranger
+		Rogue
+		Sorcerer
+		Warlock
+		Wizard
 	CharPath
+		Druid
+                Fighter
+                Monk
+                Paladin
+                Ranger
+                Rogue
+                Sorcerer
+                Warlock
+                Wizard
 	CharLevel
+                Druid
+                Fighter
+                Monk
+                Paladin
+                Ranger
+                Rogue
+                Sorcerer
+                Warlock
+                Wizard
 	Spell
 
+Add to views
+	CharClass#show
+		Spells for class
 Make views for
 	Character
 		new

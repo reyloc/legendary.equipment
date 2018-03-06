@@ -4,6 +4,7 @@ class CreateClassPaths < ActiveRecord::Migration[5.1]
       t.string :name
       t.text :description
       t.integer :feats, array:true
+      t.json :table
       t.references :char_class, foreign_key:true
     end
   end

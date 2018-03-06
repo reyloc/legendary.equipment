@@ -156,6 +156,7 @@ ActiveRecord::Schema.define(version: 20180301180003) do
     t.string "name"
     t.text "description"
     t.integer "feats", array: true
+    t.json "table"
     t.bigint "char_class_id"
     t.index ["char_class_id"], name: "index_class_paths_on_char_class_id"
   end

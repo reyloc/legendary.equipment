@@ -2,7 +2,18 @@
 <div>
   <ul>
     <% @features.each do |feature| %>
-      <li><%= link_to feature.name, feature_path(feature.id) %></li>
+      <% if feature.race_id.is_a? Integer %>
+        <% name = @races.select{|r|r.id == feature.race_id}.first.name unless feature.race_id.to_s.empty? %>
+      <% elsif feature.class_id.is_a? Integer %>
+        <% name = @char_classes.select{|c|c.id == feature.class_id}.first.name unless feature.class_id.to_s.empty? %>
+      <% else %>
+        <% name = nil %>
+      <% end %>
+      <% unless name.nil? %>
+        <li><%= link_to "#{feature.name} (#{name})", feature_path(feature.id) %></li>
+      <% else %>
+        <li> <%= link_to feature.name, feature_path(feature.id) %></li>
+      <% end %>
     <% end %>
   </ul>
 </div>

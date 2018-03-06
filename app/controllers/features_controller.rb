@@ -1,6 +1,8 @@
 class FeaturesController < ApplicationController
   def index
     @features = Feature.all.order(:name)
+    @races = Race.all
+    @char_classes = CharClass.all
   end
   def show
     begin

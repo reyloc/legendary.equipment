@@ -118,5 +118,551 @@ Feature.create([
    :table => {},
    :race_id => '',
    :class_id => ''
+  },
+  {:name => 'Spirit Seeker',
+   :description => "Yours is a path that seeks attunement with the natural world, giving you a kinship with beasts. At 3rd level when you adopt this path, you gain the ability to cast the beast sense and speak with animals spells, but only as rituals,",
+   :table => {},
+   :race_id => '',
+   :class_id => 1
+  },
+  {:name => 'Totem Spirit',
+   :description => "At 3rd level, when you adopt this path, you choose a totem spirit and gain its feature. You must make or acquire a physical totem object - an amulet or similar adornment - that incorporates fur or feathers, claws, teeth, or bones of the totem animal. As your option, you also gain minor physical attributes that are reminiscent of your totem spirit. For example, if you have a bear totem spirit, you might be unusually hairy and thick- skinned, or if your totem is the eagle, your eyes turn bright yellow. Your totem animal might be an animal related to those listed here but more appropriate to your homeland. For example, you could choose a hawk or vulture in place of an eagle.",
+   :table => {
+     headers: ['Animal', 'Description'],
+     rows: [
+       ['Bear', "While raging, you have resistance to all damage except psychic damage. The spirit of the bear makes you tough enough to stand up to any punishment."],
+       ['Eagle', "While you're raging and aren't wearing heavy armor, other creatures have disadvantage on opportunity attack rolls against you and you can use the Dash action as a bonus action on your turn. The spirit of the eagle makes you into a predator who can weave through the fray with ease."],
+       ['Wolf', "While you're raging, your friends have advantage on melee attack rolls against any creature within 5 feet of you that is hostile to you. The spirit of the wolf makes you a leader of hunters."]
+     ]
+   },
+   :race_id => '',
+   :class_id => 1
+  },
+  {:name => 'Aspect of the Beast',
+   :description => "At 6th level, you gain a magical benefit based on the totem animal of your choice. You can choose the same animal you selected at 3rd level or a different one.",
+   :table => {
+     headers: ['Animal', 'Description'],
+     rows: [
+       ['Bear', "You gain the might of a bear. Your carrying capacity (including maximum load and maximum lift) is doubled, and you have advantage on Strength checks made to push, pull, lift, or break objects."],
+       ['Eagle', "You gain the eyesight of an eagle. You can see up to 1 mile away with no difficulty, able to discern even fine details as though looking at something no more than 100 feet away from you. Additionally, dim light doesn't impose disadvantage on your Wisdom (Perception) checks."],
+       ['Wolf', "You gain the hunting sensibilities of a wolf. You can track other creatures while traveling at a fast pace, and you can move stealthily while traveling at a normal pace."]
+     ]
+   },
+   :race_id => '',
+   :class_id => 1
+  },
+  {:name => 'Spirit Walker',
+   :description => "At 10th level, you can cast the commune with nature spell, but only as a ritual. When you do so, a spiritual version of one of the animals you chose for Totem Spirit or Aspect of the Beast appears to you to convey the information you seek.",
+   :table => {},
+   :race_id => '',
+   :class_id => 1
+  },
+  {:name => 'Totemic Attunement',
+   :description => "At 14th level, you gain a magical benefit based on a totem animal of your choice. You can choose the same animal you selected previously or a different one.",
+   :table => {
+     headers: ['Animal', 'Description'],
+     rows: [
+       ['Bear', "While you're raging, any creature within 5 feet of you that's hostile to you has disadvantage on attack rolls against targets other than you or another character with this feature. An enemy is immune to this effect if it can't see or hear you or if it can't be frightened."],
+       ['Eagle', "While raging, you have a flying speed equal to your current walking speed. This benefit works only in short bursts; you fall if you end your turn in the air and nothing else is holding you aloft."],
+       ['Wolf', "While you're raging, you can use a bonus action on your turn to knock a Large or smaller creature prone when you hit it with melee weapon attack."]
+     ]
+   },
+   :race_id => '',
+   :class_id => 1
+  },
+  {:name => 'Reckless Attack',
+   :description => "Starting at 2nd level, you can throw aside all concern for defense to attack with fierce desperation. When you make your first attack on your turn, you can decide to attack recklessly. Doing so gives you advantage on melee weapon attack rolls using Strength during this turn, but attack rolls against you have advantage until your next turn.",
+   :table => {},
+   :race_id => '',
+   :class_id => 1
+  },
+  {:name => 'Danger Sense',
+   :description => "At 2nd level, you gain an uncanny sense of when things nearby are not as they should be, giving you an edge when you dodge away from danger. You have advantage on Dexterity saving throws against effects that you can see, such as traps and spells. To gain this benefit, you can't be blinded, deafened, or incapacitated.",
+   :table => {},
+   :race_id => '',
+   :class_id => 1
+  },
+  {:name => 'Primal Path',
+   :description => "At 3rd level, you choose a path that shapes the nature of your rage. Choose the Path of the Berserker or the Path of the Totem Warrior.",
+   :table => {},
+   :race_id => '',
+   :class_id => 1
+  },
+  {:name => 'Ability Score Improvement',
+   :description => "When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
+   :table => {},
+   :race_id => '',
+   :class_id => 1
+  },
+  {:name => 'Extra Attack',
+   :description => "Beginning at 5th level, you can attack twice, instead of once, whenever you take the Attack action on your turn.",
+   :table => {},
+   :race_id => '',
+   :class_id => 1
+  },
+  {:name => 'Fast Movement',
+   :description => "Starting at 5th level, your speed increases by 10 feet while you aren't wearing heavy armor.",
+   :table => {},
+   :race_id => '',
+   :class_id => 1
+  },
+  {:name => 'Feral Instinct',
+   :description => "By 7th level, your instincts are so honed that you have advantage on initiative rolls. Additionally, if you are surprised at the beginning of combat and aren't incapacitated, you can act normally on your first turn, but only if you enter your rage before doing anything else on that turn.",
+   :table => {},
+   :race_id => '',
+   :class_id => 1
+  },
+  {:name => 'Brutal Critical',
+   :description => "Beginning at 9th level, you can roll one additional weapon damage die when determining the extra damage for a critical hit with a melee attack.",
+   :table => {},
+   :race_id => '',
+   :class_id => 1
+  },
+  {:name => 'Relentless Rage',
+   :description => "Starting at 11th level, your rage can keep you fighting despite grievous wounds. If you drop to 0 hit points while you’re raging and don't die outright, you can make a DC 10 Constitution saving throw. If you succeed, you drop to 1 hit point instead. Each time you use this feature after the first, the DC increases by 5. When you finish a short or long rest, the DC resets to 10.",
+   :table => {},
+   :race_id => '',
+   :class_id => 1
+  },
+  {:name => 'Persistent Rage',
+   :description => "Beginning at 15th level, your rage is so fierce that it ends early only if you fall unconscious or if you choose to end it.",
+   :table => {},
+   :race_id => '',
+   :class_id => 1
+  },
+  {:name => 'Indomitable Might',
+   :description => "Beginning at 19th level, if your total for a Strength check is less than your Strength score, you can use that score in place of the total.",
+   :table => {},
+   :race_id => '',
+   :class_id => 1
+  },
+  {:name => 'Primal Champion',
+   :description => "At 20th level, you embody the power of the wilds. Your Strength and Constitution scores increase by 4. Your maximum for those scores is now 24.",
+   :table => {},
+   :race_id => '',
+   :class_id => 1
+  },
+  {:name => 'Bonus Proficiencies',
+   :description => "When you join the College of Lore at 3rd level, you gain proficiency with three skills of your choice.",
+   :table => {},
+   :race_id => '',
+   :class_id => 2
+  },
+  {:name => 'Cutting Words',
+   :description => "Also at 3rd level, you learn how to use your wit to distract, confuse, and otherwise sap the confidence and competence of others. When a creature that you can see within 60 feet of you makes an attack roll, an ability check, or a damage roll, you can use your reaction to expend one of your uses of Bardic Inspiration, rolling a Bardic Inspiration die and subtracting the number rolled from the creature's roll. You can choose to use this feature after the creature makes its roll, but before the DM determines whether the attack roll or ability check succeeds or fails, or before the creature deals its damage. The creature is immune if it can't hear you or if it's immune to being charmed.",
+   :table => {},
+   :race_id => '',
+   :class_id => 2
+  },
+  {:name => 'Additional Magical Secrets',
+   :description => "At 6th level, you learn two spells of your choice from any class. A spell you choose must be of a level you can cast, as shown on the Bard table, or a cantrip. The chosen spells count as bard spells for you but don't count against the number of bard spells you know.",
+   :table => {},
+   :race_id => '',
+   :class_id => 2
+  },
+  {:name => 'Peerless Skill',
+   :description => "Starting at 14th level, when you make an ability check, you can expend one use of Bardic Inspiration. Roll a Bardic Inspiration die and add the number rolled to your ability check. You can choose to do so after you roil the die for the ability check, but before the DM tells you whether you succeed or fail.",
+   :table => {},
+   :race_id => '',
+   :class_id => 2
+  },
+  {:name => 'Bonus Proficiencies',
+   :description => "When you join the College of Valor at 3rd level, you gain proficiency with three skills of your choice.",
+   :table => {},
+   :race_id => '',
+   :class_id => 2
+  },
+  {:name => 'Combat Inspiration',
+   :description => "Also at 3rd level, you learn to inspire others in battle. A creature that has a Bardic Inspiration die from you can roll that die and add the number rolled to a weapon damage roll it just made. Alternatively, when an attack roll is made against the creature, it can use its reaction to roll the Bardic Inspiration die and add the number rolled to its AC against that attack, after seeing the roll but before knowing whether it hits or misses.",
+   :table => {},
+   :race_id => '',
+   :class_id => 2
+  },
+  {:name => 'Extra Attack',
+   :description => "Starting at 6th level, you can attack twice, instead of one, whenever you take the Attack action on your turn.",
+   :table => {},
+   :race_id => '',
+   :class_id => 2
+  },
+  {:name => 'Battle Music',
+   :description => "At 14th level, you have mastered the art of weaving spellcasting and weapon use into a single harmonious act. When you use your action to cast a bard spell, you can make one weapon attack as a bonus action.",
+   :table => {},
+   :race_id => '',
+   :class_id => 2
+  },
+  {:name => 'Spellcasting',
+   :description => "Charisma is your spellcasting ability for your bard spells. Your magic comes from the heart and soul you pour into the performance of your music or oration. You use your Charisma whenever a spell refers to your spellcasting ability. In addition, you use your Charisma modifier when setting the saving throw DC for a bard spell you cast and when making an attack roll with one.",
+   :table => {
+     headers: ['Name', 'Value'],
+     rows: [
+       ['Spell Save DC', '8 + your proficiency bonus + your Charisma modifier'],
+       ['Spell Attack Modifier', 'your proficiency bonus + your Charisma modifier']
+     ],
+   },
+   :race_id => '',
+   :class_id => 2
+  },
+  {:name => 'Bardic Inspiration',
+   :description => "You can inspire others through stirring words or music. To do so, you use a bonus action on your turn to choose one creature other than yourself within 60 feet of you who can hear you. That creature gains one Bardic Inspiration die, a d6. Once within the next 10 minutes, the creature can roll the die and add the number rolled to one ability check, attack roll, or saving throw it makes. The creature can wait until after it rolls the d20 before deciding to use the Bardic Inspiration die, but must decide before the DM says whether the roll succeeds or fails. Once the Bardic Inspiration die is rolled, it is lost. A creature can have only one Bardic Inspiration die at a time. You can use this feature a number of times equal to your Charisma modifier (a minimum of once). You regain any expended uses when you finish a long rest. Your Bardic Inspiration die changes when you reach certain levels in this class. The die becomes a d8 at 5th level, a d10 at 10th level, and a d12 at 15th level.",
+   :table => {},
+   :race_id => '',
+   :class_id => 2
+  },
+  {:name => 'Jack of All Trades',
+   :description => "Starting at 2nd level, you can add half your proficiency bonus, rounded down, to any ability check you make that doesn't already include your proficiency bonus.",
+   :table => {},
+   :race_id => '',
+   :class_id => 2
+  },
+  {:name => 'Song of Rest',
+   :description => "Beginning at 2nd level, you can use soothing music or oration to help revitalize your wounded allies during a short rest. If you or any friendly creatures who can hear your performance regain hit points at the end of the short rest, each of those creatures regains an extra 1d6 hit points. The extra hit points increase when you reach certain levels in this class: to 1d8 at 9th level, to 1d10 at 13th level, and to 1d12 at 17th level.",
+   :table => {},
+   :race_id => '',
+   :class_id => 2
+  },
+  {:name => 'Bard College',
+   :description => "At 3rd level, you delve into the advanced techniques of a bard college of your choice: the College of Lore or the College of Valor. Your choice grants you features at 3rd level and again at 6th and 14th level.",
+   :table => {},
+   :race_id => '',
+   :class_id => 2
+  },
+  {:name => 'Expertise',
+   :description => "At 3rd level, choose two of your skill proficiencies. Your proficiency bonus is doubled for any ability check you make that uses either of the chosen proficiencies.",
+   :table => {},
+   :race_id => '',
+   :class_id => 2
+  },
+  {:name => 'Ability Score Improvement',
+   :description => "When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
+   :table => {},
+   :race_id => '',
+   :class_id => 2
+  },
+  {:name => 'Font of Inspiration',
+   :description => "Beginning when you reach 5th level, you regain all of your expended uses of Bardic Inspiration when you finish a short or long rest.",
+   :table => {},
+   :race_id => '',
+   :class_id => 2
+  },
+  {:name => 'Countercharm',
+   :description => "At 6th level, You gain the ability to use musical notes or words of power to disrupt mind-influencing effects. As an action, you can start a performance that lasts until the end of your next turn. During that time, you and any friendly creatures within 30 feet of you have advantage on saving throws against being frightened or charmed. A creature must be able to hear you to gain this benefit. The performance ends early if you are incapacitated or silenced or if you voluntarily end it (no action required).",
+   :table => {},
+   :race_id => '',
+   :class_id => 2
+  },
+  {:name => 'Magical Secrets',
+   :description => "By 10th level, you have plundered magical knowledge from a wide spectrum of disciplines. Choose two spells from any class, including this one. A spell you choose must be of a level you can cast, as shown on the Bard table, or a cantrip. The chosen spells count as bard spells for you and are included in the number in the Spells Known column of the Bard table. You learn two additional spells from any class at 14th level and again at 18th level.",
+   :table => {},
+   :race_id => '',
+   :class_id => 2
+  },
+  {:name => 'Superior Inspiration',
+   :description => "At 20th level, when you roll initiative and have no uses of Bardic Inspiration left, you regain one use.",
+   :table => {},
+   :race_id => '',
+   :class_id => 2
+  },
+  {:name => "Spellcasting",
+   :description => "Wisdom is your spellcasting ability for your cleric spells. The power of your spells comes from your devotion to your deity. You use your Wisdom whenever a cleric spell refers to your spellcasting ability. In addition, you use your Wisdom modifier when setting the saving throw DC for a cleric spell you cast and when making an attack roll with one.",
+   :table => {
+     headers: ['Name', 'Value'],
+     rows: [
+       ['Spell save DC', '8 + your proficiency bonus + your wisdom modifier'],
+       ['Spell attack modifier', 'your proficiency bonus + your wisdom modifier']
+     ]
+   },
+   :race_id => '',
+   :class_id => 3
+  },
+  {:name => "Divine Domain",
+   :description => "Choose one domain related to your deity: Knowledge, Life, Light, Nature, Tempest, Trickery, or War. Each domain is detailed at the end of the class description, and each one provides examples of gods associated with it. Your choice grants you domain spells and other features when you choose it at 1st level. It also grants you additional ways to use Channel Divinity when you gain that feature at 2nd level, and additional benefits at 6th, 8th, and 17th levels.",
+   :table => {},
+   :race_id => '',
+   :class_id => 3
+  },
+  {:name => "Channel Divinity",
+   :description => "At 2nd level, you gain the ability to channel divine energy directly from your deity, using that energy to fuel magical effects. You start with two such effects: Turn Undead and an effect determined by your domain. Some domains grant you additional effects as you advance in levels, as noted in the domain description. When you use your Channel Divinity, you choose which effect to create. You must then finish a short or long rest to use your Channel Divinity again. Some Channel Divinity effects require saving throws. When you use such an effect from this class, the DC equals your cleric spell save DC. Beginning at 6th level, you can use your Channel Divinity twice between rests, and beginning at 18th level, you can use it three times between rests. When you finish a short or long rest, you regain your expended uses.",
+   :table => {},
+   :race_id => '',
+   :class_id => 3
+  },
+  {:name => "Channel Divinity: Turn Undead",
+   :description => "As an action, you present your holy symbol and speak a prayer censuring the undead. Each undead that can see or hear you within 30 feet of you must make a Wisdom saving throw. If the creature fails its saving throw, it is turned for 1 minute or until it takes any damage. A turned creature must spend its turns trying to move as far away from you as it can, and it can't willingly move to a space within 30 feet of you. It also can't take reactions. For its action, it can use only the Dash action or try to escape from an effect that prevents it from moving. If there's nowhere to move, the creature can use the Dodge action.",
+   :table => {},
+   :race_id => '',
+   :class_id => 3
+  },
+  {:name => "Ability Score Improvement",
+   :description => "When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
+   :table => {},
+   :race_id => '',
+   :class_id => 3
+  },
+  {:name => "Destroy Undead",
+   :description => "Starting at 5th level, when an undead fails its saving throw against your Turn Undead feature, the creature is instantly destroyed if its challenge rating is at or below a certain threshold, as shown in the Destroy Undead table.",
+   :table => {
+     headers: ['Cleric Level', 'Destroys Undead of CR'],
+     rows: [
+       ['5th', '1/2 or lower'],
+       ['8th', '1 or lower'],
+       ['11th', '2 or lower'],
+       ['14th', '3 or lower'],
+       ['17th', '4 or lower']
+     ]
+   },
+   :race_id => '',
+   :class_id => 3
+  },
+  {:name => "Divine Intervention",
+   :description => "Beginning at 10th level, you can call on your deity to intervene on your behalf when your need is great. Imploring your deity's aid requires you to use your action. Describe the assistance you seek, and roll percentile dice. If you roll a number equal to or lower than your cleric level, your deity intervenes. The DM chooses the nature of the intervention; the effect of any cleric spell or cleric domain spell would be appropriate. If your deity intervenes, you can't use this feature again for 7 days. Otherwise, you can use it again after you finish a long rest. At 20th level, your call for intervention succeeds automatically, no roll required.",
+   :table => {},
+   :race_id => '',
+   :class_id => 3
+  },
+  {:name => "Blessing of Knowledge",
+   :description => "At 1st level, you learn two languages of your choice. You also become proficient in your choice of two of the following skills: Arcana, History, Nature, or Religion. Your proficiency bonus is doubled for any ability check you make that uses either of those skills.",
+   :table => {},
+   :race_id => '',
+   :class_id => 3
+  },
+  {:name => "Channel Divinity: Knowledge of the Ages",
+   :description => "Starting at 2nd level, you can use your Channel Divinity to tap into a divine well of knowledge. As an action, you choose one skill or tool. For 10 minutes, you have proficiency with the chosen skill or tool.",
+   :table => {},
+   :race_id => '',
+   :class_id => 3
+  },
+  {:name => "Channel Divinity: Read Thoughts",
+   :description => "At 6th level, you can use your Channel Divinity to read a creature's thoughts. You can then use your access to the creature's mind to command it. As an action, choose one creature that you can see within 60 feet of you. That creature must make a Wisdom saving throw. If the creature succeeds on the saving throw, you can't use this feature on it again until you finish a long rest. If the creature fails its save, you can read its surface thoughts (those foremost in its mind, reflecting its current emotions and what it is actively thinking about) when it is within 60 feet of you. This effect lasts for 1 minute. During that time, you can use your action to end this effect and cast the suggestion spell on the creature without expending a spell slot. The target automatically fails its saving throw against the spell.",
+   :table => {},
+   :race_id => '',
+   :class_id => 3
+  },
+  {:name => "Potent Spellcasting",
+   :description => "Starting at 8th level, you add your Wisdom modifier to the damage you deal with any cleric cantrip.",
+   :table => {},
+   :race_id => '',
+   :class_id => 3
+  },
+  {:name => "Visions of the Past",
+   :description => "Starting at 17th level, you can call up visions of the past that relate to an object you hold or your immediate surroundings. You spend at least I minute in meditation and prayer, then receive dreamlike, shadowy glimpses of recent events. You can meditate in this way for a number of minutes equal to your Wisdom score and must maintain concentration during that time, as if you were casting a spell. Once you use this feature, you can't use it again until you finish a short or long rest.",
+   :table => {
+     headers: ['Name', 'Value'],
+     rows: [
+       ['Object Reading', "Holding an object as you meditate, you can see visions of the object's previous owner. After meditating for 1 minute, you learn how the owner acquired and lost the object, as well as the most recent significant event involving the object and that owner. If the object was owned by another creature in the recent past (within a number of days equal to your Wisdom score), you can spend 1 additional minute for each owner to learn the same information about that creature."],
+       ['Area Reading', "As you meditate, you see visions of recent events in your immediate vicinity (a room, street, tunnel, clearing, or the like, up to a 50-foot cube), going back a number of days equal to your Wisdom score. For each minute you meditate, you learn about one significant event, beginning with the most recent. Significant events typically involve powerful emotions, such as battles and betrayals, marriages and murders, births and funerals. However, they might also include more mundane events that are nevertheless important in your current situation."]
+     ]
+   },
+   :race_id => '',
+   :class_id => 3
+  },
+  {:name => "Bonus Proficiency",
+   :description => "When you choose this domain at 1st level, you gain proficiency with heavy armor.",
+   :table => {},
+   :race_id => '',
+   :class_id => 3
+  },
+  {:name => "Disciple of Life",
+   :description => "Also starting at 1st level, your healing spells are more effective. Whenever you use a spell of 1st level or higher to restore hit points to a creature, the creature regains additional hit points equal to 2 + the spell level.",
+   :table => {},
+   :race_id => '',
+   :class_id => 3
+  },
+  {:name => "Channel Divinity: Preserve Life",
+   :description => "Starting at 2nd level, you can use your Channel Divinity to heal the badly injured. As an action, you present your holy symbol and evoke healing energy that can restore a number of hit points equal to five times your cleric level. Choose any creatures within 30 feet of you, and divide those hit points among them. This feature can restore a creature to no more than half of its hit point maximum. You can't use this feature on an undead or a construct.",
+   :table => {},
+   :race_id => '',
+   :class_id => 3
+  },
+  {:name => "Blessed Healer",
+   :description => "Beginning at 6th level, the healing spells you cast on others heal you as well. When you cast a spell of 1st level or higher that restores hit points to a creature other than you, you regain hit points equal to 2 + the spell level.",
+   :table => {},
+   :race_id => '',
+   :class_id => 3
+  },
+  {:name => "Divine Strike",
+   :description => "At 8th level, you gain the ability to infuse your weapon strikes with divine energy. Once on each of your turns when you hit a creature with a weapon attack, you can cause the attack to deal an extra 1d8 radiant damage to the target. When you reach 14th level, the extra damage increases to 2d8.",
+   :table => {},
+   :race_id => '',
+   :class_id => 3
+  },
+  {:name => "Supreme Healing",
+   :description => "Starting at 17th level, when you would normally roll one or more dice to restore hit points with a spell, you instead use the highest number possible for each die. For example, instead of restoring 2d16 hit points to a creature, you restore 12.",
+   :table => {},
+   :race_id => '',
+   :class_id => 3
+  },
+  {:name => "Bonus Cantrip",
+   :description => "When you choose this domain at 1st level, you gain the light cantrip if you don't already know it.",
+   :table => {},
+   :race_id => '',
+   :class_id => 3
+  },
+  {:name => "Warding Flare",
+   :description => "Also at 1st level, you can interpose divine light between yourself and an attacking enemy. When you are attacked by a creature within 30 feet of you that you can see, you can use your reaction to impose disadvantage on the attack roll, causing light to flare before the attacker before it hits or misses. An attacker that can't be blinded is immune to this feature. You can use this feature a number of times equal to your Wisdom modifier (a minimum of once). You regain all expended uses when you finish a long rest.",
+   :table => {},
+   :race_id => '',
+   :class_id => 3
+  },
+  {:name => "Channel Divinity: Radiance of the Dawn",
+   :description => "Starting at 2nd level, you can use your Channel Divinity to harness sunlight, banishing darkness and dealing radiant damage to your foes. As an action, you present your holy symbol, and any magical darkness within 30 feet of you is dispelled. Additionally, each hostile creature within 30 feel of you must make a Constitution saving throw. A creature takes radiant damage equal to 2d1O + your cleric level on a failed saving throw, and half as much damage on a successful one. A creature that has total cover from you is not affected.",
+   :table => {},
+   :race_id => '',
+   :class_id => 3
+  },
+  {:name => "Improved Flare",
+   :description => "Starting at 6th level, you can also use your Warding Flare feature when a creature that you can see within 30 feet of you attacks a creature other than you.",
+   :table => {},
+   :race_id => '',
+   :class_id => 3
+  },
+  {:name => "Potent Spellcasting",
+   :description => "Starting at 8th level, you add your Wisdom modifier to the damage you deal with any cleric cantrip.",
+   :table => {},
+   :race_id => '',
+   :class_id => 3
+  },
+  {:name => "Corona of Light",
+   :description => "Starting at 17th level, you can use your action to activate an aura of sunlight that lasts for 1 minute or until you dismiss it using another action. You emit bright light in a 60-foot radius and dim light 30 feet beyond that. Your enemies in the bright light have disadvantage on saving throws against any spell that deals fire or radiant damage.",
+   :table => {},
+   :race_id => '',
+   :class_id => 3
+  },
+  {:name => "Acolyte of Nature",
+   :description => "At 1st level, you learn one druid cantrip of your choice. You also gain proficiency in one of the following skills of your choice: Animal Handling, Nature, or Survival.",
+   :table => {},
+   :race_id => '',
+   :class_id => 3
+  },
+  {:name => "Bonus Proficiency",
+   :description => "Also at 1st level, you gain proficiency with heavy armor.",
+   :table => {},
+   :race_id => '',
+   :class_id => 3
+  },
+  {:name => "Channel Divinity: Charm Animals and Plants",
+   :description => "Starting at 2nd level, you can use your Channel Divinity to charm animals and plants. As an action, you present your holy symbol and invoke the name of your deity. Each beast or plant creature that can see you within 30 feet of you must make a Wisdom saving throw. If the creature fails its saving throw, it is charmed by you for 1 minute or until it takes damage. While it is charmed by you, it is friendly to you and other creatures you designate.",
+   :table => {},
+   :race_id => '',
+   :class_id => 3
+  },
+  {:name => "Dampen Elements",
+   :description => "Starting at 6th level, when you or a creature within 30 feet of you takes acid, cold, tire, lightning, or thunder damage, you can use your reaction to grant resistance to the creature against that instance of the damage.",
+   :table => {},
+   :race_id => '',
+   :class_id => 3
+  },
+  {:name => "Diving Strike",
+   :description => "At 8th level, you gain the ability to infuse your weapon strikes with divine energy. Once on each of your turns when you hit a creature with a weapon attack, you can cause the attack to deal an extra 1d8 cold, tire, or lightning damage (your choice) to the target. When you reach 14th level, the extra damage increases to 2d8.",
+   :table => {},
+   :race_id => '',
+   :class_id => 3
+  },
+  {:name => "Master of Nature",
+   :description => "At 17th level, you gain the ability to command animals and plant creatures. While creatures are charmed by your Charm Animals and Plants feature, you can take a bonus action on your turn to verbally command what each of those creatures will do on its next turn.",
+   :table => {},
+   :race_id => '',
+   :class_id => 3
+  },
+  {:name => "Bonus Proficiencies",
+   :description => "At 1st level, you gain proficiency with martial weapons and heavy armor.",
+   :table => {},
+   :race_id => '',
+   :class_id => 3
+  },
+  {:name => "Wrath of the Storm",
+   :description => "Also at 1st level, you can thunderously rebuke attackers. When a creature within 5 feet of you that you can see hits you with an attack, you can use your reaction to cause the creature to make a Dexterity saving throw. The creature takes 2d8 lightning or thunder damage (your choice) on a failed saving throw, and half as much damage on a successful one. You can use this feature a number of times equal to your Wisdom modifier (a minimum of once). You regain all expended uses when you finish a long rest.",
+   :table => {},
+   :race_id => '',
+   :class_id => 3
+  },
+  {:name => "Channel Divinity: Destructive Wrath",
+   :description => "Starting at 2nd level, you can use your Channel Divinity to wield the power of the storm with unchecked ferocity. When you roll lightning or thunder damage, you can use your Channel Divinity to deal maximum damage, instead of rolling.",
+   :table => {},
+   :race_id => '',
+   :class_id => 3
+  },
+  {:name => "Thunderbolt Strike",
+   :description => "At 6th level, when you deal lightning damage to a Large or smaller creature, you can also push it up to 10 feet away from you.",
+   :table => {},
+   :race_id => '',
+   :class_id => 3
+  },
+  {:name => "Divine Strike",
+   :description => "At 8th level, you gain the ability to infuse your weapon strikes with divine energy. Once on each of your turns when you hit a creature with a weapon attack, you can cause the attack to deal an extra 1d8 thunder damage to the target. When you reach 14th level, the extra damage increases to 2d8.",
+   :table => {},
+   :race_id => '',
+   :class_id => 3
+  },
+  {:name => "Stormborn",
+   :description => "At 17th level, you have a flying speed equal to your current walking speed whenever you are not underground or indoors.",
+   :table => {},
+   :race_id => '',
+   :class_id => 3
+  },
+  {:name => "Blessing of the Trickster",
+   :description => "Starting when you choose this domain at 1st level, you can use your action to touch a willing creature other than yourself to give it advantage on Dexterity (Stealth) checks. This blessing lasts for 1 hour or until you use this feature again.",
+   :table => {},
+   :race_id => '',
+   :class_id => 3
+  },
+  {:name => "Channel Divinity: Invoke Duplicity",
+   :description => "Starting at 2nd level, you can use your Channel Divinity to create an illusory duplicate of yourself. As an action, you create a perfect illusion of yourself that lasts for 1 minute, or until you lose your concentration (as if you were concentrating on a spell). The illusion appears in an unoccupied space that you can see within 30 feet of you. As a bonus action on your turn, you can move the illusion up to 30 feet to a space you can see, but it must remain within 120 feet of you. For the duration, you can cast spells as though you were in the illusion's space, but you must use your own senses. Additionally, when both you and your illusion are within 5 feet of a creature that can see the illusion, you have advantage on attack rolls against that creature, given how distracting the illusion is to the target.",
+   :table => {},
+   :race_id => '',
+   :class_id => 3
+  },
+  {:name => "Channel Divinity: Cloak of Shadows",
+   :description => "Starting at 6th level, you can use your Channel Divinity to vanish. As an action, you become invisible until the end of your next turn. You become visible if you attack or cast a spell.",
+   :table => {},
+   :race_id => '',
+   :class_id => 3
+  },
+  {:name => "Divine Strike",
+   :description => "At 8th level, you gain the ability to infuse your weapon strikes with poison-a gift from your deity. Once on each of your turns when you hit a creature with a weapon attack, you can cause the attack to deal an extra 1d8 poison damage to the target. When you reach 14th level, the extra damage increases to 2d8.",
+   :table => {},
+   :race_id => '',
+   :class_id => 3
+  },
+  {:name => "Improved Duplicity",
+   :description => "At 17th level, you can create up to four duplicates of yourself, instead of one, when you use Invoke Duplicity. As a bonus action on your turn, you can move any number of them up to 30 feet, to a maximum range of 120 feet.",
+   :table => {},
+   :race_id => '',
+   :class_id => 3
+  },
+  {:name => "Bonus Proficiency",
+   :description => "At 1st level, you gain proficiency with martial weapons and heavy armor.",
+   :table => {},
+   :race_id => '',
+   :class_id => 3
+  },
+  {:name => "War Priest",
+   :description => "From 1st level, your god delivers bolts of inspiration to you while you are engaged in battle. When you use the Attack action, you can make one weapon attack as a bonus action. You can use this feature a number of times equal to your Wisdom modifier (a minimum of once). You regain all expended uses when you finish a long rest.",
+   :table => {},
+   :race_id => '',
+   :class_id => 3
+  },
+  {:name => "Channel Divinity: Guided Strike",
+   :description => "Starting at 2nd level, you can use your Channel Divinity to strike with supernatural accuracy. When you make an attack roll, you can use your Channel Divinity to gain a +10 bonus to the roll. You make this choice after you see the roll, but before the DM says whether the attack hits or misses.",
+   :table => {},
+   :race_id => '',
+   :class_id => 3
+  },
+  {:name => "Channel Divinity: War God's Blessing",
+   :description => "At 6th level, when a creature within 30 feet of you makes an attack roll, you can use your reaction to grant that creature a +10 bonus to the roll, using your Channel Divinity. You make this choice after you see the roll, but before the DM says whether the attack hits or misses.",
+   :table => {},
+   :race_id => '',
+   :class_id => 3
+  },
+  {:name => "Divine Strike",
+  :description => "At 8th level, you gain the ability to infuse your weapon strikes with divine energy. Once on each of your turns when you hit a creature with a weapon attack, you can cause the attack to deal an extra 1d8 damage of the same type dealt by the weapon to the target. When you reach 14th level, the extra damage increases to 2d8.",
+   :table => {},
+   :race_id => '',
+   :class_id => 3
+  },
+  {:name => "Avatar of Battle",
+   :description => "At 17th level, you gain resistance to bludgeoning, piercing, and slashing damage from nonmagical weapons.",
+   :table => {},
+   :race_id => '',
+   :class_id => 3
   }
 ])

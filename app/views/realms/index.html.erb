@@ -1,0 +1,8 @@
+<h1>Realms</h1>
+<div>
+  <ul>
+    <% @realms.each do |realm| %>
+      <li><%= link_to realm.name, realm_path(realm.id) %></li>
+    <% end %>
+  </ul>
+</div>

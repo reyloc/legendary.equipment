@@ -1,0 +1,6 @@
+<h1>Conditions</h1>
+<ul>
+  <% @conditions.each do |condition| %>
+    <li><%= link_to condition.name, condition_path(condition.id) %></li>
+  <% end %>
+</ul>

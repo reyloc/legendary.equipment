@@ -1,0 +1,11 @@
+<h1><%= @god.name %></h1>
+<center><%= @god.of %></center>
+<div>
+  <ul>
+    <% realm = Realm.find(@god.realm_id) %>
+    <li>Realm: <%= link_to realm.name, realm_path(realm.id) %></li>
+    <li>Alignment: <%= link_to "#{@alignment.axis} #{@alignment.name}", alignment_path(@alignment.id) %></li>
+    <li>Suggested Domains: <%= @god.suggested_domains.join(', ') %></li>
+    <li>Symbol: <%= @god.symbol %></li>
+  </ul>
+</div>

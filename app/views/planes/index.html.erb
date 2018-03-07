@@ -1,0 +1,14 @@
+<h1>Planes</h1>
+<div>
+  <ul>
+    <% @planes.each do |plane| %>
+      <% if plane.plane_type.empty? %>
+        <li><%= link_to plane.name, plane_path(plane.id) %><ul>
+          <% @planes.select{|s|s.plane_type == plane.name}.each do |sp| %>
+            <li><%= link_to sp.name, plane_path(sp.id) %></li>
+          <% end %>
+        </ul></li>
+      <% end %>
+    <% end %>
+  </ul>
+</div>

@@ -1,0 +1,8 @@
+<h1><%= @plane.name %></h1>
+<% unless @plane.plane_type.empty? %>
+  <center>Of the <%= @plane.plane_type %></center>
+<% end %>
+<div class='attribute-border'></div>
+<div>
+  <%= @plane.description %>
+</div>

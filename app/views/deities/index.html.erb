@@ -1,0 +1,8 @@
+<h1>Deities</h1>
+<div>
+  <ul>
+    <% @gods.each do |god| %>
+      <li><%= link_to god.name, deity_path(god.id) %></li>
+    <% end %>
+  </ul>
+</div>

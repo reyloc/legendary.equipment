@@ -1,0 +1,2 @@
+class Realm < ApplicationRecord
+end

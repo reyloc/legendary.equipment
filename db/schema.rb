@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180301180003) do
+ActiveRecord::Schema.define(version: 20180306214934) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -166,6 +166,22 @@ ActiveRecord::Schema.define(version: 20180301180003) do
     t.text "description"
   end
 
+  create_table "conditions", force: :cascade do |t|
+    t.string "name"
+    t.text "info", array: true
+  end
+
+  create_table "deities", force: :cascade do |t|
+    t.string "name"
+    t.bigint "alignment_id"
+    t.text "suggested_domains", array: true
+    t.text "symbol"
+    t.string "of"
+    t.bigint "realm_id"
+    t.index ["alignment_id"], name: "index_deities_on_alignment_id"
+    t.index ["realm_id"], name: "index_deities_on_realm_id"
+  end
+
   create_table "equipment_types", force: :cascade do |t|
     t.string "name"
     t.text "description"
@@ -226,6 +242,12 @@ ActiveRecord::Schema.define(version: 20180301180003) do
     t.index ["background_id"], name: "index_personality_traits_on_background_id"
   end
 
+  create_table "planes", force: :cascade do |t|
+    t.string "name"
+    t.string "plane_type"
+    t.text "description"
+  end
+
   create_table "races", force: :cascade do |t|
     t.string "name"
     t.string "bio"
@@ -250,6 +272,11 @@ ActiveRecord::Schema.define(version: 20180301180003) do
     t.string "height_mod"
     t.string "weight_mod"
     t.index ["size_id"], name: "index_races_on_size_id"
+  end
+
+  create_table "realms", force: :cascade do |t|
+    t.string "name"
+    t.text "description"
   end
 
   create_table "sizes", force: :cascade do |t|
@@ -353,6 +380,8 @@ ActiveRecord::Schema.define(version: 20180301180003) do
   add_foreign_key "characters", "users"
   add_foreign_key "class_levels", "char_classes"
   add_foreign_key "class_paths", "char_classes"
+  add_foreign_key "deities", "alignments"
+  add_foreign_key "deities", "realms"
   add_foreign_key "flaws", "backgrounds"
   add_foreign_key "gears", "equipment_types"
   add_foreign_key "ideals", "backgrounds"

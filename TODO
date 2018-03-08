@@ -15,10 +15,6 @@ Models
 	CustomClassLeveling
 	CustomFeature
 	CustomSpell
-	Condition
-		name, description
-	Plane
-		name, description
 
 Add Content to (assume all unless listed otherwise)
 	Feats
@@ -61,8 +57,8 @@ Add Content to (assume all unless listed otherwise)
                 Warlock
                 Wizard
 	Spell
-	Realm
 	Deity
+	Condition
 
 Add to views
 	CharClass#show

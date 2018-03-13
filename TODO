@@ -3,6 +3,7 @@ Optimization once site is done
 	minify css
 	minify js
 Models
+	Monster/Creature
 	CustomArmor
 	CustomWeapon
 	CustomGear
@@ -22,7 +23,6 @@ Add Content to (assume all unless listed otherwise)
 		Done in parallel with classes
 	Ideal
 	Bonds
-	Flaws
 	PersonalityTrait
 	Armor
 	Weapon
@@ -58,6 +58,12 @@ Add Content to (assume all unless listed otherwise)
                 Wizard
 	Spell
 	Deity
+		Eberron
+		Nonhuman
+		Celtic
+		Greek
+		Egyptian
+		Norse
 	Monsters/Creatures
 
 Add to views

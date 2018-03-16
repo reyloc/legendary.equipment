@@ -127,5 +127,17 @@ ClassPath.create([
      ]
    },
    :char_class_id => 3
+  },
+  {:name => 'Circle of the Land',
+   :description => "The Circle of the Land is made up of mystics and sages who safeguard ancient knowledge and rites through a vast oral tradition, These druids meet within sacred circles of trees or standing stones to whisper primal secrets in Druidic, The circle's wisest members preside as the chief priests of communities that hold to the Old Faith and serve as advisors to the rulers of those folk, As a member of this circle, your magic is influenced by the land where you were initiated into the circle's mysterious rites.",
+   :feats => [112,113,114,115,116,117],
+   :table => {},
+   :char_class_id => 4
+  },
+  {:name => 'Circle of the Moon',
+   :description => "Druids of the Circle of the Moon are fierce guardians of the wilds. Their order gathers under the full moon to share news and trade warnings. They haunt the deepest parts of the wilderness, where they might go for weeks on end before crossing paths with another humanoid creature, let alone another druid. Changeable as the moon, a druid of this circle might prowl as a great cat one night, soar over the treetops as an eagle the next day, and crash through the undergrowth in bear form to drive off a trespassing monster. The wild is in the druid's blood.",
+   :feats => [118,119,120,121,122],
+   :table => {},
+   :char_class_id => 4
   }
 ])

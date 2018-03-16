@@ -104,7 +104,7 @@ CharClass.create([
    :weapon_prof => ['Club', 'Dagger', 'Dart', 'Javelin', 'Mace', 'Quarterstaff', 'Scimitar', 'Sickle', 'Sling', 'Spear'],
    :skill_prof => 2,
    :tool_prof => ['Herbalism Kit'],
-   :skill_prof_choices => [2,37,10,11,12,15,18],
+   :skill_prof_choices => [2,7,10,11,12,15,18],
    :fund_modifier => 10,
    :fund_roll => '5d4'
   }

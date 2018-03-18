@@ -125,7 +125,14 @@
       <% Ideal.where(:background_id => @background.id).each_with_index do |ideal, index| %>
         <tr>
           <td><%= index+1 %></td>
-          <td><b><%= ideal.name %></b> - <%= ideal.description %> (alignments)</td>
+          <td>
+            <% links = [] %>
+            <% ideal.alignment.each do |a| %>
+              <% alignment = @alignments.select{|align|align.id == a}.first %>
+              <% links.push(link_to "#{alignment.axis} #{alignment.name}", alignment_path(a)) %>
+            <% end %>
+            <b><%= ideal.name %></b> - <%= ideal.description %> (<%= links.join(', ').html_safe %>)
+          </td>
         </tr>
       <% end %>
     </tbody>
@@ -165,7 +172,7 @@
       <% Flaw.where(:background_id => @background.id).each_with_index do |flaw, index| %>
         <tr>
           <td><%= index+1 %></td>
-          <td><b><%= flaw.description %></td>
+          <td><%= flaw.description %></td>
         </tr>
       <% end %>
     </tbody>

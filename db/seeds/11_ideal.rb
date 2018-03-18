@@ -88,5 +88,155 @@ Ideal.create([
    :description => "There's a spark of good in everyone",
    :alignment => [1,2,3],
    :background_id => 3
+  },
+  {:name => "Beauty",
+   :description => "When I perform, I make the world better than it was",
+   :alignment => [1,2,3],
+   :background_id => 4
+  },
+  {:name => "Tradition",
+   :description => "The stories, legends, and songs of the past must never be forgotten, for they teach us who we are",
+   :alignment => [1,4,7],
+   :background_id => 4
+  },
+  {:name => "Creativity",
+   :description => "The world is in need of new ideas and bold action",
+   :alignment => [3,6,9],
+   :background_id => 4
+  },
+  {:name => "Greed",
+   :description => "I'm only in it for the money and fame",
+   :alignment => [7,8,9],
+   :background_id => 4
+  },
+  {:name => "People",
+   :description => "I like seeing the smiles on people's faces when I perform. That's all that matters",
+   :alignment => [4,5,6],
+   :background_id => 4
+  },
+  {:name => "Honesty",
+   :description => "Art should reflect the soul; it should come from within and reveal who we really are",
+   :alignment => [1,2,3,4,5,6,7,8,9],
+   :background_id => 4
+  },
+  {:name => "Respect",
+   :description => "People deserve to be treated with dignity and respect",
+   :alignment => [1,2,3],
+   :background_id => 5
+  },
+  {:name => "Fairness",
+   :description => "No one should get preferential treatment before the law, and no one is above the law",
+   :alignment => [1,4,7],
+   :background_id => 5
+  },
+  {:name => "Freedom",
+   :description => "Tyrants must not be allowed to oppress the people",
+   :alignment => [3,6,9],
+   :background_id => 5
+  },
+  {:name => "Might",
+   :description => "If I become strong, I can take what I want and what I deserve",
+   :alignment => [7,8,9],
+   :background_id => 5
+  },
+  {:name => "Sincerity",
+   :description => "There's no good in pretending to be something I'm not",
+   :alignment => [4,5,6],
+   :background_id => 5
+  },
+  {:name => "Destiny",
+   :description => "Nothing and no one can steer me away from my higher calling",
+   :alignment => [1,2,3,4,5,6,7,8,9],
+   :background_id => 5
+  },
+  {:name => "Community",
+   :description => "It is the duty of all civilized people to strengthen the bonds of community and the security of civilization",
+   :alignment => [1,4,7],
+   :background_id => 7
+  },
+  {:name => "Generosity",
+   :description => "My talents were given to me so that I could use them to benefit the world",
+   :alignment => [1,2,3],
+   :background_id => 7
+  },
+  {:name => "Freedom",
+   :description => "Everyone should be free to pursue his or her own livelihood",
+   :alignment => [3,6,9],
+   :background_id => 7
+  },
+  {:name => "Greed",
+   :description => "I'm only in it for the money",
+   :alignment => [7,8,9],
+   :background_id => 7
+  },
+  {:name => "People",
+   :description => "I'm committed to the people I care about, not to ideals",
+   :alignment => [4,5,6],
+   :background_id => 7
+  },
+  {:name => "Aspiration",
+   :description => "I work hard to be the best there is at my craft",
+   :alignment => [1,2,3,4,5,6,7,8,9],
+   :background_id => 7
+  },
+  {:name => "Greater Good",
+   :description => "My gifts are meant to be shared with all, not used for my own benefit",
+   :alignment => [1,2,3],
+   :background_id => 6
+  },
+  {:name => "Logic",
+   :description => "Emotions must not cloud our sense of what it right and true, or our logical thinking",
+   :alignment => [1,4,7],
+   :background_id => 6
+  },
+  {:name => "Free Thinking",
+   :description => "Inquiry and curiosity are the pillars of progress",
+   :alignment => [3,6,9],
+   :background_id => 6
+  },
+  {:name => "Power",
+   :description => "Solitude and contemplation are paths toward mystical or magical power",
+   :alignment => [7,8,9],
+   :background_id => 6
+  },
+  {:name => "Live and Let Live",
+   :description => "Meddling in the affairs of others only causes trouble",
+   :alignment => [4,5,6],
+   :background_id => 6
+  },
+  {:name => "Self-Knowledge",
+   :description => "If you know yourself, there's nothing left to know",
+   :alignment => [1,2,3,4,5,6,7,8,9],
+   :background_id => 6
+  },
+  {:name => "Respect",
+   :description => "Respect is due to me because of my position, but all people regardless of station deserve to be treated with dignity",
+   :alignment => [1,2,3],
+   :background_id => 8
+  },
+  {:name => "Responsibility",
+   :description => "It is my duty to respect the authority of those above me, just as those below me must respect mine",
+   :alignment => [1,4,7],
+   :background_id => 8
+  },
+  {:name => "Independence",
+   :description => "I must prove that I can handle myself without the coddling of my family",
+   :alignment => [3,6,9],
+   :background_id => 8
+  },
+  {:name => "Power",
+   :description => "If I can attain more power, no one will tell me what to do",
+   :alignment => [7,8,9],
+   :background_id => 8
+  },
+  {:name => "Family",
+   :description => "Blood runs thicker than water",
+   :alignment => [1,2,3,4,5,6,7,8,9],
+   :background_id => 8
+  },
+  {:name => "Noble Obligation",
+   :description => "It is my duty to protect and care for the people beneath me",
+   :alignment => [1,2,3],
+   :background_id => 8
   }
 ])

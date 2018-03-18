@@ -9,6 +9,7 @@ class BackgroundsController < ApplicationController
       @background = Background.find_by_name(params[:id])
     end
     @feature = Feature.find(@background.feature_id)
+    @alignments = Alignment.all.order(:id)
     if @background.name == 'Sailor'
       @variant_feature = Feature.find_by_name('Bad Reputation')
     else

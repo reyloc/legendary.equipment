@@ -238,5 +238,155 @@ Ideal.create([
    :description => "It is my duty to protect and care for the people beneath me",
    :alignment => [1,2,3],
    :background_id => 8
+  },
+  {:name => "Change",
+   :description => "Life is like the seasons, in constant change, and we must change with it.",
+   :alignment => [3,6,9],
+   :background_id => 9
+  },
+  {:name => "Greater Good",
+   :description => "It is each person's responsibility to make the most happiness for the whole tribe.",
+   :alignment => [1,2,3],
+   :background_id => 9
+  },
+  {:name => "Honor",
+   :description => "If I dishonor myself, I dishonor my whole clan",
+   :alignment => [1,4,7],
+   :background_id => 9
+  },
+  {:name => "Might",
+   :description => "The strongest are meant to rule",
+   :alignment => [7,8,9],
+   :background_id => 9
+  },
+  {:name => "Nature",
+   :description => "The natural world is more important than all the constructs of civilization",
+   :alignment => [4,5,6],
+   :background_id => 9
+  },
+  {:name => "Glory",
+   :description => "I must earn glory in battle, for myself and my clan",
+   :alignment => [1,2,3,4,5,6,7,8,9],
+   :background_id => 9
+  },
+  {:name => "Knowledge",
+   :description => "The path to power and self-improvement is through knowledge",
+   :alignment => [4,5,6],
+   :background_id => 10
+  },
+  {:name => "Beauty",
+   :description => "What is beautiful points us beyond itself toward what is true",
+   :alignment => [1,2,3],
+   :background_id => 10
+  },
+  {:name => "Logic",
+   :description => "Emotions must not cloud our logical thinking",
+   :alignment => [1,4,7],
+   :background_id => 10
+  },
+  {:name => "No Limits",
+   :description => "Nothing should fetter the infinite possibility inherent in all existence",
+   :alignment => [3,6,9],
+   :background_id => 10
+  },
+  {:name => "Power",
+   :description => "Knowledge is the path to power and domination",
+   :alignment => [7,8,9],
+   :background_id => 10
+  },
+  {:name => "Self-Improvement",
+   :description => "The goal of a life of study is the betterment of oneself",
+   :alignment => [1,2,3,4,5,6,7,8,9],
+   :background_id => 10
+  },
+  {:name => "Respect",
+   :description => "The thing that keeps a ship together is mutual respect between captain and crew",
+   :alignment => [1,2,3],
+   :background_id => 11
+  },
+  {:name => "Fairness",
+   :description => "We all do the work, so we all share in the rewards",
+   :alignment => [1,4,7],
+   :background_id => 11
+  },
+  {:name => "Freedom",
+   :description => "The sea is freedom - the freedom to go anywhere and do anything",
+   :alignment => [3,6,9],
+   :background_id => 11
+  },
+  {:name => "Mastery",
+   :description => "I'm a predator, and the other ships on the sea are my prey",
+   :alignment => [7,8,9],
+   :background_id => 11
+  },
+  {:name => "People",
+   :description => "I'm committed to my crewmates, not to ideals",
+   :alignment => [4,5,6],
+   :background_id => 11
+  },
+  {:name => "Aspiration",
+   :description => "Someday I'll own my own ship and chart my own destiny",
+   :alignment => [1,2,3,4,5,6,7,8,9],
+   :background_id => 11
+  },
+  {:name => "Greater Good",
+   :description => "Our lot is to lay down our lives in defense of others",
+   :alignment => [1,2,3],
+   :background_id => 12
+  },
+  {:name => "Responsibility",
+   :description => "I do what I must and obey just authority",
+   :alignment => [1,4,7],
+   :background_id => 12
+  },
+  {:name => "Independence",
+   :description => "When people follow orders blindly, they embrace a kind of tyranny",
+   :alignment => [3,6,9],
+   :background_id => 12
+  },
+  {:name => "Might",
+   :description => "In life as in war, the stronger force wins",
+   :alignment => [7,8,9],
+   :background_id => 12
+  },
+  {:name => "Live and Let Live",
+   :description => "Ideals aren't worth killing over or going to war for",
+   :alignment => [4,5,6],
+   :background_id => 12
+  },
+  {:name => "Nation",
+   :description => "My city, nation, or people are all that matter",
+   :alignment => [1,2,3,4,5,6,7,8,9],
+   :background_id => 12
+  },
+  {:name => "Respect",
+   :description => "All people, rich or poor, deserve respect",
+   :alignment => [1,2,3],
+   :background_id => 13
+  },
+  {:name => "Community",
+   :description => "We have to take care of each other, because no one else is going to do it",
+   :alignment => [1,4,7],
+   :background_id => 13
+  },
+  {:name => "Change",
+   :description => "The low are lifted up, and the high and mighty are brought down. Change is the nature of things",
+   :alignment => [3,6,9],
+   :background_id => 13
+  },
+  {:name => "Retribution",
+   :description => "The rich need to be shown what life and death are like in the gutters",
+   :alignment => [7,8,9],
+   :background_id => 13
+  },
+  {:name => "People",
+   :description => "I help the people who help me - that's what keeps us alive",
+   :alignment => [4,5,6],
+   :background_id => 13
+  },
+  {:name => "Aspiration",
+   :description => "I'm going to prove that I'm worthy of a better life",
+   :alignment => [1,2,3,4,5,6,7,8,9],
+   :background_id => 13
   }
 ])

@@ -224,7 +224,7 @@ ActiveRecord::Schema.define(version: 20180306214934) do
   create_table "ideals", force: :cascade do |t|
     t.string "name"
     t.text "description"
-    t.text "alignment", array: true
+    t.integer "alignment", array: true
     t.bigint "background_id"
     t.index ["background_id"], name: "index_ideals_on_background_id"
   end

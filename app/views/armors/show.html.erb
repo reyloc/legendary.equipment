@@ -11,7 +11,11 @@
 <div>
   <h3>Stats</h3>
   <ul>
+    <% if @armor.AC_modifier.empty? %>
+    <li>Armor Class: <%= @armor.AC %></li>
+    <% else %>
     <li>Armor Class: <%= @armor.AC %> + <%= @armor.AC_modifier %> (max <%= @armor.AC_modifier_max %>)</li>
+    <% end %>
     <li>Type: <%= EquipmentType.find(@armor.equipment_type_id).name %></li>
     <li>Cost: <%= @armor.cost %> <%= @armor.currency %></li>
     <li>Strength Required: <%= @armor.strength %></li>

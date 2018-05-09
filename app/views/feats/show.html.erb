@@ -1,15 +1,22 @@
 <h1><%= @feat.name %></h1>
 <div>
+  <% unless @feat.description.empty? %>
   <h3>Description</h3>
   <%= @feat.description %>
+  <% end %>
 </div>
 <div>
+  <% unless @feat.prereq_attribute.empty? && @feat.prereq_other.empty? %>
   <h3>Prerequisite</h3>
   <ul>
-    <li>Required Attribute: <%= @feat.prereq_attribute %></li>
-    <li>Minimum Required: <%= @feat.prereq_min %></li>
-    <li>Other Prerequisite: <%= @feat.prereq_other %></li>
+    <% unless @feat.prereq_attribute.empty? %>
+    <li><%= @feat.prereq_min %> or higher <%= @feat.prereq_attribute %></li>
+    <% end %>
+    <% unless @feat.prereq_other.empty? %>
+    <li><%= @feat.prereq_other %></li>
+    <% end %>
   </ul>
+  <% end %>
   <h3>Benefits</h3>
   <ul>
     <% @feat.benefits.each do |bene| %>

@@ -17,7 +17,7 @@ class CreateCharClasses < ActiveRecord::Migration[5.1]
       t.text :armor_prof, array: true
       t.text :weapon_prof, array: true
       t.integer :skill_prof
-      t.integer :tool_prof, array: true
+      t.string :tool_prof, array: true
       t.integer :skill_prof_choices, array: true
       t.integer :fund_modifier
       t.string :fund_roll

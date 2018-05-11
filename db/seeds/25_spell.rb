@@ -1,7 +1,7 @@
 Spell.create([
   {:name => 'Acid Splash',
-   :level => 2,
-   :spell_type => 'Abjuration',
+   :level => 0,
+   :spell_type => 'Conjuration',
    :casting_time => 1,
    :time_unit => 'action',
    :components => [1,2],

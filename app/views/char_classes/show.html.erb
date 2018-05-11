@@ -42,20 +42,35 @@
   <h3>Starting Equipment</h3>
   You may choose to start with <%= @charclass.fund_roll %>&times;<%= @charclass.fund_modifier %> GP or the following set:
   <ul>
-    <% @charclass.starting_equipment.to_h['items'].each do |hash| %>
+    <% @charclass.starting_equipment.to_h['items'].each do |selection| %>
       <li>
-        <% if hash['quantity'].kind_of? Array %>
-          <% hash['quantity'].each_with_index do |q, i| %>
-            <%= q %> <%= hash['choices'][i] %> <%= (i == hash['choices'].length-1 ? '' : 'or') %>
+        <% selection['choices'].each_with_index do |choice, index| %>
+        <% if choice['quantity'].kind_of? Array %>
+          <% choice['quantity'].each_with_index do |quan, ind| %>
+            <%= quan %>
+            <% if quan == 1 %>
+            <%= choice['items'][ind] %>
+            <% else %>
+            <%= choice['items'][ind].pluralize %>
+            <% end %>
+            <% unless choice['quantity'].size-1 == ind %>+ <% end %>
           <% end %>
         <% else %>
-          <%= hash['choices'].join(' or ') %>
+          <%= choice['quantity'] %>
+          <% if choice['quantity'] == 1 %>
+          <%= choice['items'].join(', ') %>
+          <% else %>
+          <%= choice['items'].map{|i|i.pluralize}.join(', ') %>
+          <% end %>
+        <% end %>
+        <% unless selection['choices'].size-1 == index %> OR <% end %>
         <% end %>
       </li>
     <% end %>
   </ul>
 </div>
 <div class='attribute-border'></div>
+<% if @charclass.class_levels.size > 0 %>
 <div>
   <h3>Leveling</h3>
   <table class='table table-striped table-hover'>
@@ -90,6 +105,8 @@
   </table>
 </div>
 <div class='attribute-border'></div>
+<% end %>
+<% if @paths.size > 0 %>
 <div>
   <h3>Paths</h3>
   <% @paths.each do |path| %>
@@ -127,6 +144,8 @@
   <% end %>
 </div>
 <div class='attribute-border'></div>
+<% end %>
+<% if features_to_desc.size > 0 %>
 <div>
   <h3>Short Feature Description (click link for more info)</h3>
   <ul>
@@ -135,3 +154,4 @@
   <% end %>
   </ul>
 </div>
+<% end %>

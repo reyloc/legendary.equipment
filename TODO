@@ -20,7 +20,6 @@ Models
 Add Content to (assume all unless listed otherwise)
         Features
 		Done in parallel with classes
-	Gear
 	CharClass
 		Fighter
 		Monk
@@ -48,7 +47,12 @@ Add Content to (assume all unless listed otherwise)
                 Sorcerer
                 Warlock
                 Wizard
+	Gear
+		Need to think this out
+	Tool
+                Need to think this out
 	Spell
+		Require classes to be done
 	Monsters/Creatures
 
 Add to views
@@ -64,3 +68,7 @@ Action cable for chat
 	http://guides.rubyonrails.org/action_cable_overview.html
 Character form
 	Fuel UX
+
+Usable/interactive map
+
+Forum

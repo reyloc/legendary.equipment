@@ -990,5 +990,57 @@ Feature.create([
    :table => {},
    :race_id => '',
    :class_id => 5
+  },
+  {:name => "Fighting Style",
+   :description => "You adopt a particular style of fighting as your specialty, Choose one of the following options. You can't take a Fighting Style option more than once, even if you later get to choose again.",
+   :table => {
+     headers: ['Style', 'Description'],
+     rows: [
+       ["Archery", "You gain a +2 bonus to attack rolls you make with ranged weapons."],
+       ["Defense", "While you are wearing armor, you gain a +1 bonus to AC."],
+       ["Dueling", "When you are wielding a melee weapon in one hand and no other weapons, you gain a +2 bonus to damage rolls with that weapon."],
+       ["Great Weapon Fighting", "When you roll a 1 or 2 on a damage die for an attack you make with a melee weapon that you are wielding with two hands, you can re-roll the die and must use the new roll, even if the new roll is a 1 or a 2. The weapon must have the two-handed or versatile property for you to gain this benefit."],
+       ["Protection", "When a creature you can see attacks a target other than you that is within 5 feet of you, you can use your reaction to impose disadvantage on the attack roll. You must be wielding a shield."],
+       ["Two-Weapon Fighting", "When you engage in two-weapon fighting, you can add your ability modifier to the damage of the second attack."],
+     ]
+   },
+   :race_id => '',
+   :class_id => 5
+  },
+  {:name => "Second Wind",
+   :description => "You have a limited well of stamina that you can draw on to protect Yourself from harm. On your turn, you can use a bonus action to regain hit points equal to 1d10 + your fighter level. Once you use this feature, you must finish a short or long rest before you can use it again.",
+   :table => {},
+   :race_id => '',
+   :class_id => 5
+  },
+  {:name => "Action Surge",
+   :description => "Starting at 2nd level, you can push yourself beyond your normal limits for a moment. On your turn, you can take one additional action on top of your regular action and a possible bonus action. Once you use this feature, you must finish a short or long rest before you can use it again. Starting at 17th level, you can use it twice before a rest, but only once on the same turn.",
+   :table => {},
+   :race_id => '',
+   :class_id => 5
+  },
+  {:name => "Martial Archetype",
+   :description => "At 3rd level, you choose an archetype that you strive to emulate in your combat styles and techniques. Choose Champion, Battle Master, or Eldritch Knight. The archetype you choose grants you features at 3rd level and again at 7th, 10th, 15th, and 18th level.",
+   :table => {},
+   :race_id => '',
+   :class_id => 5
+  },
+  {:name => "Ability Score Improvement",
+   :description => "When you reach 4th level, and again at 6th, 8th, 12th, 14th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
+   :table => {},
+   :race_id => '',
+   :class_id => 5
+  },
+  {:name => "Extra Attack",
+   :description => "Beginning at 5th level, you can attack twice, instead of once, whenever you take the Attack action on your turn. The number of attacks increases to three when you reach 11th level in this class and to four when you reach 20th level in this class.",
+   :table => {},
+   :race_id => '',
+   :class_id => 5
+  },
+  {:name => "Indomitable",
+   :description => "Beginning at 9th level, you can re-roll a saving throw that you fail. If you do so, you must use the new roll, and you can't use this feature again until you finish a long rest. You can use this feature twice between long rests starting at 13th level and three times between long rests starting at 17th level.",
+   :table => {},
+   :race_id => '',
+   :class_id => 5
   }
 ])

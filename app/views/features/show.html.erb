@@ -1,6 +1,6 @@
 <h1><%= @feature.name %></h1>
 <div>
-  <%= @feature.description %>
+  <%= raw @feature.description %>
 </div>
 <% unless @feature.table.to_h.empty? %>
   <div class='attribute-border'></div>

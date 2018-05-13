@@ -139,5 +139,23 @@ ClassPath.create([
    :feats => [118,119,120,121,122],
    :table => {},
    :char_class_id => 4
+  },
+  {:name => 'Champion',
+   :description => "The archetypal Champion focuses on the development of raw physical power honed to deadly perfection. Those who model themselves on this archetype combine rigorous training with physical excellence to deal devastating blows.",
+   :feats => [123,124,125,126,127],
+   :table => {},
+   :char_class_id => 5
+  },
+  {:name => 'Battle Master',
+   :description => "Those who emulate the archetypal Battle Master employ martial techniques passed down through generations. To a Battle Master, combat is an academic field, sometimes including subjects beyond battle such as weapon smithing and calligraphy. Not every fighter absorbs the lessons of history, theory, and artistry that are reflected in the Battle Master archetype, but those who do are well-rounded fighters of great skill and knowledge.",
+   :feats => [128,129,130,131,132,133],
+   :table => {},
+   :char_class_id => 5
+  },
+  {:name => 'Eldritch Knight',
+   :description => "The archetypal Eldritch Knight combines the martial mastery common to all fighters with a careful study of magic. Eldritch Knights use magical techniques similar to those practiced by wizards, They focus their study on two of the eight schools of magic: abjuration and evocation. Abjuration spells grant an Eldritch Knight additional protection in battle, and evocation spells deal damage to many foes at once, extending the fighter's reach in combat. These knights learn a comparatively small number of spells, committing them to memory instead of keeping them in a spellbook.",
+   :feats => [134,135,136,137,138,139],
+   :table => {},
+   :char_class_id => 5
   }
 ])

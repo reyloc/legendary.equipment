@@ -228,5 +228,212 @@ CharClass.create([
    :skill_prof_choices => [1,4,6,7,15,17],
    :fund_modifier => 1,
    :fund_roll => '5d4'
+  },
+  {:name => "Paladin",
+   :description => "A holy warrior bound lo a sacred oath",
+   :image => 'paladin.jpg',
+   :primary_ability => 'Str and Cha',
+   :bio => "Clad in plate armor that gleams in the sunlight despite the dust and grime of long travel, a human lays down her sword and shield and places her hands on a mortally wounded man. Divine radiance shines from her hands, the man's wounds knit closed, and his eyes open wide with amazement. A dwarf crouches behind an outcrop, his black cloak making him nearly invisible in the night, and watches an orc war band celebrating its recent victory. Silently, he stalks into their midst and whispers an oath, and two orcs are dead before they even realize he is there. Silver hair shining in a shaft of light that seems to illuminate only him, an elf laughs with exultation. His spear flashes like his eyes as he jabs again and again at a twisted giant, until at last his light overcomes its hideous darkness. Whatever their origin and their mission, paladins are united by their oaths to stand against the forces of evil. Whether sworn before a god's altar and the witness of a priest, in a sacred glade before nature spirits and fey beings, or in a moment of desperation and grief with the dead as the only witness, a paladin's oath is a powerful bond. It is a source of power that turns a devout warrior into a blessed champion.",
+   :saving_throws => ['Wis', 'Cha'],
+   :hit_dice => '1d10',
+   :hp_at_first_level => 10,
+   :hp_at_first_level_attribute => 'Con',
+   :hp_at_higher_levels => '1d10',
+   :hp_at_higher_levels_min => 6,
+   :hp_at_higher_levels_attribute => 'Con',
+   :starting_equipment => {items: [
+     {choices: [
+       {quantity: 1, items: ['Any Martial Weapon', 'Shield']},
+       {quantity: 2, items: ['Any Martial Weapon']}
+     ]},
+     {choices: [
+       {quantity: 5, items: ["Javelin"]},
+       {quantity: 1, items: ["Any Simple Weapon"]}
+     ]},
+     {choices: [
+       {quantity: 1, items: ["Priest's Pack"]},
+       {quantity: 1, items: ["Explorer's Pack"]}
+     ]},
+     {choices: [
+       {quantity: 1, items: ['Chain Mail']}
+     ]},
+     {choices: [
+       {quantity: 1, items: ['Holy Symbol']}
+     ]},
+   ]},
+   :armor_prof => ['Light Armor', 'Medium Armor', 'Heavy Armor', 'Shield'],
+   :weapon_prof => ["Simple Weapons", "Martial Weapons"],
+   :skill_prof => 2,
+   :tool_prof => [],
+   :skill_prof_choices => [4,7,8,10,14,15],
+   :fund_modifier => 10,
+   :fund_roll => '5d4'
+  },
+  {:name => "Ranger",
+   :description => "A warrior who uses martial prowess and nature magic to combat threats on the edges of civilization",
+   :image => 'ranger.jpg',
+   :primary_ability => 'Dex',
+   :bio => "Rough and wild looking, a human stalks alone through the shadows of trees, hunting the orcs he knows are planning a raid on a nearby farm, Clutching a short sword in each hand, he becomes a whirlwind of steel, cutting down one enemy after another. After tumbling away from a cone of freezing air, an elf finds her feet and draws back her bow to loose an arrow at the white dragon. Shrugging off the wave of fear that emanates from the dragon like the cold of its breath, she sends one arrow after another to find the gaps between the dragon's thick scales. Holding his hand high, a half-elf whistles to the hawk that circles high above him, calling the bird back to his side. Whispering instructions in Elvish, he points to the owlbear he's been tracking and sends the hawk to distract the creature while he readies his bow. Far from the bustle of cities and towns, past the hedges that shelter the most distant farms from the terrors of the wild, amid the dense-packed trees of trackless forests and across wide and empty plains, rangers keep their unending watch.",
+   :saving_throws => ['Str', 'Dex'],
+   :hit_dice => '1d10',
+   :hp_at_first_level => 10,
+   :hp_at_first_level_attribute => 'Con',
+   :hp_at_higher_levels => '1d10',
+   :hp_at_higher_levels_min => 6,
+   :hp_at_higher_levels_attribute => 'Con',
+   :starting_equipment => {items: [
+     {choices: [
+       {quantity: 1, items: ['Scale Mail']},
+       {quantity: 1, items: ['Leather Armor']}
+     ]},
+     {choices: [
+       {quantity: 2, items: ["Shortsword"]},
+       {quantity: 2, items: ["Any Simple Weapon"]}
+     ]},
+     {choices: [
+       {quantity: 1, items: ["Dungeoneer's Pack"]},
+       {quantity: 1, items: ["Explorer's Pack"]}
+     ]},
+     {choices: [
+       {quantity: 1, items: ['Longbow']}
+     ]},
+     {choices: [
+       {quantity: 1, items: ['Quiver']}
+     ]},
+     {choices: [
+       {quantity: 20, items: ['Arrow']}
+     ]},
+   ]},
+   :armor_prof => ['Light Armor', 'Medium Armor', 'Shield'],
+   :weapon_prof => ["Simple Weapons", "Martial Weapons"],
+   :skill_prof => 3,
+   :tool_prof => [],
+   :skill_prof_choices => [2,4,7,9,11,12,17,18],
+   :fund_modifier => 10,
+   :fund_roll => '5d4'
+  },
+  {:name => "Rogue",
+   :description => "A scoundrel who uses stealth and trickery to overcome obstacles and enemies",
+   :image => 'rogue.jpg',
+   :primary_ability => 'Dex',
+   :bio => "Signaling for her companions to wait, a halfling creeps forward through the dungeon hall. She presses an ear to the door, then pulls out a set of tools and picks the lock in the blink of an eye. Then she disappears into the shadows as her fighter friend moves forward to kick the door open. A human lurks in the shadows of an alley while his accomplice prepares for her part in the ambush. When their target-a notorious slaver-passes the alleyway, the accomplice cries out, the slaver comes to investigate, and the assassin's blade cuts his throat before he can make a sound. Suppressing a giggle, a gnome waggles her fingers and magically lifts the key ring from the guard's belt. In a moment, the keys are in her hand, the cell door is open, and she and her companions are free to make their escape. Rogues rely on skill, stealth, and their foes' vulnerabilities to get the upper hand in any situation. They have a knack for finding the solution to just about any problem, demonstrating a resourcefulness and versatility that is the cornerstone of any successful adventuring party.",
+   :saving_throws => ['Dex', 'Int'],
+   :hit_dice => '1d8',
+   :hp_at_first_level => 8,
+   :hp_at_first_level_attribute => 'Con',
+   :hp_at_higher_levels => '1d8',
+   :hp_at_higher_levels_min => 5,
+   :hp_at_higher_levels_attribute => 'Con',
+   :starting_equipment => {items: [
+     {choices: [
+       {quantity: 1, items: ['Rapier']},
+       {quantity: 1, items: ['Shortsword']}
+     ]},
+     {choices: [
+       {quantity: [1,1,20], items: ["Shortbow", "Quiver", "Arrow"]},
+       {quantity: 1, items: ["Shortsword"]}
+     ]},
+     {choices: [
+       {quantity: 1, items: ["Burglar's Pack"]},
+       {quantity: 1, items: ["Dungeoneer's Pack"]},
+       {quantity: 1, items: ["Explorer's Pack"]}
+     ]},
+     {choices: [
+       {quantity: 1, items: ['Leather Armor']}
+     ]},
+     {choices: [
+       {quantity: 2, items: ['Dagger']}
+     ]},
+     {choices: [
+       {quantity: 1, items: ["Thieves' Tools"]}
+     ]},
+   ]},
+   :armor_prof => ['Light Armor'],
+   :weapon_prof => ["Simple Weapons", "Hand Crossbows", "Longswords", "Rapiers", "Shortswords"],
+   :skill_prof => 4,
+   :tool_prof => ["Thieves' Tools"],
+   :skill_prof_choices => [1,4,5,7,8,9,12,13,14,16,17],
+   :fund_modifier => 10,
+   :fund_roll => '4d4'
+  },
+  {:name => "Warlock",
+   :description => "A wielder of magic that is derived from a bargain with an extraplanar entity",
+   :image => 'warlock.jpg',
+   :primary_ability => 'Cha',
+   :bio => "Golden eyes flashing, a human stretches out her hand and unleashes the dragonfire that burns in her veins. As an inferno rages around her foes, leathery wings spread from her back and she takes to the air. Long hair whipped by a conjured wind, a half-elf spreads his arms wide and throws his head back. Lifting him momentarily off the ground. a wave of magic surges up in him, through him, and out from him in a mighty blast of lightning. Crouching behind a stalagmite, a halfling points a finger at a charging troglodyte. A blast of fire springs from her finger to strike the creature. She ducks back behind the rock formation with a grin, unaware that her wild magic has turned her skin bright blue. Sorcerers carry a magical birthright conferred upon them by an exotic bloodline, some otherworldly influence. or exposure to unknown cosmic forces. One can't study sorcery as one learns a language, any more than one can learn to live a legendary life. No one chooses sorcery; the power chooses the sorcerer.",
+   :saving_throws => ['Wis', 'Cha'],
+   :hit_dice => '1d8',
+   :hp_at_first_level => 8,
+   :hp_at_first_level_attribute => 'Con',
+   :hp_at_higher_levels => '1d8',
+   :hp_at_higher_levels_min => 5,
+   :hp_at_higher_levels_attribute => 'Con',
+   :starting_equipment => {items: [
+     {choices: [
+       {quantity: [1,20], items: ['Light Crossbow', 'Bolt']},
+       {quantity: 1, items: ['Any Simple Weapon']}
+     ]},
+     {choices: [
+       {quantity: 1, items: ["Component Pouch"]},
+       {quantity: 1, items: ["Arcane Focus"]}
+     ]},
+     {choices: [
+       {quantity: 1, items: ["Scholar's Pack"]},
+       {quantity: 1, items: ["Dungeoneer's Pack"]}
+     ]},
+     {choices: [
+       {quantity: 1, items: ['Leather Armor']}
+     ]},
+     {choices: [
+       {quantity: 1, items: ['Any Simple Weapon']}
+     ]},
+     {choices: [
+       {quantity: 2, items: ['Dagger']}
+     ]}
+   ]},
+   :armor_prof => ['Light Armor'],
+   :weapon_prof => ["Simple Weapons"],
+   :skill_prof => 2,
+   :tool_prof => [],
+   :skill_prof_choices => [3,5,6,8,9,11,15],
+   :fund_modifier => 10,
+   :fund_roll => '4d4'
+  },
+  {:name => "Wizard",
+   :description => "A scholarly magic-user capable of manipulating the structures of reality",
+   :image => 'wizard.jpg',
+   :primary_ability => 'Int',
+   :bio => "Clad in the silver robes that denote her station, an elf closes her eyes to shut out the distractions of the battlefield and begins her quiet chant. Fingers weaving in front of her, she completes her spell and launches a tiny bead of tire toward the enemy ranks, where it erupts into a configuration that engulfs the soldiers. Checking and rechecking his work, a human scribes an intricate magic circle in chalk on the bare stone floor, then sprinkles powdered iron along every line and graceful curve. When the circle is complete, he drones a long incantation. A hole opens in space inside the circle, bringing a whiff of brimstone from the otherworldly plane beyond. Crouching on the floor in a dungeon intersection, a gnome tosses a handful of small bones inscribed with mystic symbols, muttering a few words of power over them. Closing his eyes to see the visions more clearly, he nods slowly, then opens his eyes and points down the passage to his left. Wizards are supreme magic-users, defined and united as a class by the spells they cast. Drawing on the subtle weave of magic that permeates the cosmos, wizards cast spells of explosive tire, arcing lightning, subtle deception, and brute.force mind control. Their magic conjures monsters from other planes of existence, glimpses the future, or turns slain foes into zombies. Their mightiest spells change one substance into another, call meteors down from the sky, or open portals to other worlds.",
+   :saving_throws => ['Int', 'Wis'],
+   :hit_dice => '1d6',
+   :hp_at_first_level => 6,
+   :hp_at_first_level_attribute => 'Con',
+   :hp_at_higher_levels => '1d6',
+   :hp_at_higher_levels_min => 4,
+   :hp_at_higher_levels_attribute => 'Con',
+   :starting_equipment => {items: [
+     {choices: [
+       {quantity: 1, items: ["Quarterstaff"]},
+       {quantity: 1, items: ["Dagger"]}
+     ]},
+     {choices: [
+       {quantity: 1, items: ["Component Pouch"]},
+       {quantity: 1, items: ["Arcane Focus"]}
+     ]},
+     {choices: [
+       {quantity: 1, items: ["Scholar's Pack"]},
+       {quantity: 1, items: ["Explorer's Pack"]}
+     ]},
+     {choices: [
+       {quantity: 1, items: ['Spellbook']}
+     ]}
+   ]},
+   :armor_prof => [],
+   :weapon_prof => ["Daggers", "Darts", "Slings", "Quarterstaffs", "Light Crossbows"],
+   :skill_prof => 2,
+   :tool_prof => [],
+   :skill_prof_choices => [3,6,7,9,10,15],
+   :fund_modifier => 10,
+   :fund_roll => '4d4'
   }
 ])

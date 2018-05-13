@@ -19,14 +19,7 @@ Models
 
 Add Content to (assume all unless listed otherwise)
         Features
-		Done in parallel with classes
-	CharClass
-		Paladin
-		Ranger
-		Rogue
-		Sorcerer
-		Warlock
-		Wizard
+		Done in parallel with charpath and charlevel
 	CharPath
                 Fighter
                 Monk
@@ -51,6 +44,9 @@ Add Content to (assume all unless listed otherwise)
                 Need to think this out
 	Spell
 		Require classes to be done
+		Spells by level
+		Spells by class
+		Spells by school
 	Monsters/Creatures
 
 Add to views

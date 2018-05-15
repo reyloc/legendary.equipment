@@ -1,8 +1,27 @@
 <h1>Traits</h1>
+<div class='form-group row'>
+  <div class='col-sm-3'></div>
+  <label for='filter' class='col-sm-2 col-form-label' style='line-height:35px;'>Apply Filter</label>
+  <div class='col-sm-4'>
+    <select class='form-control' id='filter' name='filter' autocomplete='off'>
+      <option value='all'>Show all Traits</option>
+      <% @races.each do |race| %>
+      <option value='<%= race.name.delete(' ') %>'>Show all <%= race.name %> Traits</option>
+      <% end %>
+    </select>
+  </div>
+</div>
 <div>
   <ul>
     <% @traits.each do |trait| %>
-      <li><%= link_to "#{trait.name} (#{trait.race.name})", trait_path(trait.id) %></li>
+      <% race = @races.select{|r|r.id == trait.race_id}.first %>
+      <li class='<%= race.name.delete(' ') %> all'><%= link_to "#{trait.name} (#{race.name})", trait_path(trait.id) %></li>
     <% end %>
   </ul>
 </div>
+<script type='text/javascript'>
+  $('#filter').on('change', function() {
+    $('.all').hide();
+    $('.' + this.value).show();
+  });
+</script>

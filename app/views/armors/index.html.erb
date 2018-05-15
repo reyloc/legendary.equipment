@@ -1,8 +1,27 @@
 <h1>Armor</h1>
+<div class='form-group row'>
+  <div class='col-sm-3'></div>
+  <label for='filter' class='col-sm-2 col-form-label' style='line-height:35px;'>Apply Filter</label>
+  <div class='col-sm-4'>
+    <select class='form-control' id='filter' name='filter' autocomplete='off'>
+      <option value='all'>Show all Armors</option>
+      <% @types.each do |type| %>
+      <% if type.name =~ /armor/i || type.name == 'Shield' %><option value='<%= type.name.delete(' ') %>'>Show all <%= type.name %></option><% end %>
+      <% end %>
+    </select>
+  </div>
+</div>
 <div>
   <ul>
     <% @armors.each do |armor| %>
-      <li><%= link_to armor.name, armor_path(armor.id) %></li>
+      <% type = @types.select{|t|t.id == armor.equipment_type_id}.first.name.delete(' ') %>
+      <li class='<%= type %> all'><%= link_to armor.name, armor_path(armor.id) %></li>
     <% end %>
   </ul>
 </div>
+<script type='text/javascript'>
+  $('#filter').on('change', function() {
+    $('.all').hide();
+    $('.' + this.value).show();
+  });
+</script>

@@ -1,6 +1,8 @@
 class DeitiesController < ApplicationController
   def index
     @gods = Deity.all.order(:name)
+    @alignments = Alignment.all.order(:id)
+    @realms = Realm.all.order(:id)
   end
   def show
     begin

@@ -1,6 +1,7 @@
 class WeaponsController < ApplicationController
   def index
     @weapons = Weapon.all.order(:name)
+    @types = EquipmentType.all.order(:id)
   end
   def show
     begin

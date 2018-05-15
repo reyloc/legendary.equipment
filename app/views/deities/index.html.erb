@@ -1,8 +1,31 @@
 <h1>Deities</h1>
+<div class='form-group row'>
+  <div class='col-sm-3'></div>
+  <label for='filter' class='col-sm-2 col-form-label' style='line-height:35px;'>Apply Filter</label>
+  <div class='col-sm-4'>
+    <select class='form-control' id='filter' name='filter' autocomplete='off'>
+      <option value='all'>Show all Deities</option>
+      <% @realms.each do |r| %>
+      <option value='<%= r.name.delete(' ') %>'>Show all from the <%= r.name %></option>
+      <% end %>
+      <% @alignments.each do |a| %>
+      <option value='<%= "#{a.axis}#{a.name}" %>'>Show all of the <%= "#{a.axis} #{a.name}" %> alignment</option>
+      <% end %>
+    </select>
+  </div>
+</div>
 <div>
   <ul>
     <% @gods.each do |god| %>
-      <li><%= link_to "#{god.name}, #{god.of}", deity_path(god.id) %></li>
+      <% realm = @realms.select{|r|r.id == god.realm_id}.first.name.delete(' ') %>
+      <% align = @alignments.select{|a|a.id == god.alignment_id}.first %>
+      <li class='<%= realm %> <%= "#{align.axis}#{align.name}" %> all'><%= link_to "#{god.name}, #{god.of}", deity_path(god.id) %></li>
     <% end %>
   </ul>
 </div>
+<script type='text/javascript'>
+  $('#filter').on('change', function() {
+    $('.all').hide();
+    $('.' + this.value).show();
+  });
+</script>

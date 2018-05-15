@@ -4,9 +4,10 @@
   <label for='filter' class='col-sm-2 col-form-label' style='line-height:35px;'>Apply Filter</label>
   <div class='col-sm-4'>
     <select class='form-control' id='filter' name='filter' autocomplete='off'>
-      <option value='all'>Show all</option>
+      <option value='all'>Show all Features</option>
+      <option value='Background'>Show Background Features</option>
       <% @char_classes.each do |char| %>
-      <option value='<%= char.name %>'>Show <%= char.name %></option>
+      <option value='<%= char.name %>'>Show <%= char.name %> Features</option>
       <% end %>
     </select>
   </div>
@@ -19,13 +20,9 @@
       <% elsif feature.class_id.is_a? Integer %>
         <% name = @char_classes.select{|c|c.id == feature.class_id}.first.name unless feature.class_id.to_s.empty? %>
       <% else %>
-        <% name = nil %>
+        <% name = 'Background' %>
       <% end %>
-      <% unless name.nil? %>
-        <li class='<%= name %> all'><%= link_to "#{feature.name} (#{name})", feature_path(feature.id) %></li>
-      <% else %>
-        <li class='all'> <%= link_to feature.name, feature_path(feature.id) %></li>
-      <% end %>
+      <li class='<%= name %> all'><%= link_to "#{feature.name} (#{name})", feature_path(feature.id) %></li>
     <% end %>
   </ul>
 </div>

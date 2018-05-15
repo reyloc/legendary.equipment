@@ -3,7 +3,7 @@
   <div class='col-sm-3'></div>
   <label for='filter' class='col-sm-2 col-form-label' style='line-height:35px;'>Apply Filter</label>
   <div class='col-sm-4'>
-    <select class='form-control' id='filter' name='filter'>
+    <select class='form-control' id='filter' name='filter' autocomplete='off'>
       <option value='all'>Show all</option>
       <% @char_classes.each do |char| %>
       <option value='<%= char.name %>'>Show <%= char.name %></option>

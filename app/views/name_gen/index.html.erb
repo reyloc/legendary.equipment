@@ -1,35 +1,28 @@
 <h1>Name Generator</h1>
 <div>
-  <form class='form-horizontal' onsubmit='return false;'>
-    <div class='form-group'>
-      <div class='col-sm-3'>
-        <label for='race' class='sr-only'>Race</label>
-        <select id='race' name='race' autocomplete='off'>
-          <% @races.each do |race| %>
-          <option value='<%= race.name.delete(' ') %>'><%= race.name %></option>
-          <% end %>
-        </select>
-      </div>
-      <div class='col-sm-2'>
-        <label for='gender' class='sr-only'>Class</label>
-        <select id='gender' name='gender' autocomplete='off'>
-          <option value='All'>All Genders</option>
-          <option value='Male'>Males</option>
-          <option value='Female'>Females</option>
-        </select>
-      </div>
-      <div class='col-sm-2'>
-        <label for='number' class='sr-only'>Number of Names</label>
-        <input type='number' id='number' name='number' min='1' max='50' value='10' autocomplete='off' class='form-control input-sm'>
-      </div>
-      <div class='col-sm-3'>
-        <input type="checkbox" class="form-check-input" id="descriptors" autocomplete='off'>
-        <label for='descriptors' class="form-check-label">Descriptors?</label>
-      </div>
-      <div class='col-sm-2'>
-        <button id='generate' class="btn btn-primary mb-2">Generate Names</button>
-      </div>
-  </form>
+  <%= form_with :url => '/name_gen', :class => 'form-horizontal', :html => {:onsubmit => 'return false;'} do |f| %>
+  <div class='form-group'>
+    <div class='col-sm-3'>
+      <%= f.label 'race', class: 'sr-only' %>
+      <%= f.select 'race', options_for_select(Race.all.order(:name).collect{|r|[r.name, r.name.delete(' ')]}), {}, {:autocomplete => 'off', :id => 'race'} %>
+    </div>
+    <div class='col-sm-2'>
+      <%= f.label 'gender', class: 'sr-only' %>
+      <%= f.select 'gender', options_for_select([['All Genders', 'All'],['Male','Male'],['Female','Female']]), {}, {:autocomplete => 'off', :id => 'gender'} %>
+    </div>
+    <div class='col-sm-2'>
+      <%= f.label 'Number of Names', class: 'sr-only' %>
+      <%= f.text_field 'Number of Names', class: 'form-control input-sm', type: 'number', min: 1, max: 50, value: 10, autocomplete: 'off', id: 'number' %>
+    </div>
+    <div class='col-sm-3'>
+      <%= f.check_box "descriptors", id: 'descriptors', autocomplete: 'off' %>
+      <%= f.label "descriptors?", class: 'form-check-label' %>
+    </div>
+    <div class='col-sm-2'>
+      <%= button_tag 'Generate Names', type: 'button', id: 'generate', class: 'btn btn-primary mb-2' %>
+    </div>
+  </div>
+  <% end %>
 </div>
 <div class='attribute-border'></div>
 <div id='names'>

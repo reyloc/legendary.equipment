@@ -19,6 +19,7 @@ Rails.application.routes.draw do
   resources 'traits', :except => [:update, :new, :edit, :destroy, :create]
   resources 'tools', :except => [:update, :new, :edit, :destroy, :create]
   resources 'weapons', :except => [:update, :new, :edit, :destroy, :create]
+  resources 'name_gen', :except => [:show, :update, :new, :edit, :destroy, :create]
   get '/getClass/:id', to: 'api#getClass'
   get '/getRace/:id', to: 'api#getRace'
   root 'home#index'

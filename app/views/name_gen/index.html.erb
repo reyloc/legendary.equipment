@@ -1,0 +1,63 @@
+<h1>Name Generator</h1>
+<div>
+  <form class='form-horizontal' onsubmit='return false;'>
+    <div class='form-group'>
+      <div class='col-sm-3'>
+        <label for='race' class='sr-only'>Race</label>
+        <select id='race' name='race' autocomplete='off'>
+          <% @races.each do |race| %>
+          <option value='<%= race.name.delete(' ') %>'><%= race.name %></option>
+          <% end %>
+        </select>
+      </div>
+      <div class='col-sm-2'>
+        <label for='gender' class='sr-only'>Class</label>
+        <select id='gender' name='gender' autocomplete='off'>
+          <option value='All'>All Genders</option>
+          <option value='Male'>Males</option>
+          <option value='Female'>Females</option>
+        </select>
+      </div>
+      <div class='col-sm-2'>
+        <label for='number' class='sr-only'>Number of Names</label>
+        <input type='number' id='number' name='number' min='1' max='50' value='10' autocomplete='off' class='form-control input-sm'>
+      </div>
+      <div class='col-sm-3'>
+        <input type="checkbox" class="form-check-input" id="descriptors" autocomplete='off'>
+        <label for='descriptors' class="form-check-label">Descriptors?</label>
+      </div>
+      <div class='col-sm-2'>
+        <button id='generate' class="btn btn-primary mb-2">Generate Names</button>
+      </div>
+  </form>
+</div>
+<div class='attribute-border'></div>
+<div id='names'>
+</div>
+<script type='text/javascript'>
+  function rand(list) {
+    return list[Math.floor(Math.random()*list.length)];
+  }
+  function generate_name() {
+    var output = '';
+    var group_of_names = <%= raw NAME_LIST.to_json %>[$('#race').val()][$('#gender').val()];
+    var descriptors = <%= raw DESCRIPTORS %>;
+    for (var i = 0; i < $('#number').val(); i++) {
+      output += '<li>';
+      for (var n = 0; n < group_of_names.length; n++) {
+        output += rand(group_of_names[n]) + ' ';
+      }
+      if ($('#descriptors').is(':checked')) {
+        output += ' the ' + rand(descriptors);
+      }
+      output += '</li>';
+    }
+    return output;
+  }
+  $('#generate').click(function() {
+    $('#names').html('<ul>');
+    if ($('#number').val() > 50) { $('#number').val(50) }
+    $('#names').append(generate_name());
+    $('#names').append('</ul>');
+  });
+</script>

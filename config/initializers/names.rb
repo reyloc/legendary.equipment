@@ -77,7 +77,7 @@ TIEFLING_VIRTUE_NAMES = [
   "Art", "Carrion", "Chant", "Creed", "Despair", "Excellence", "Fear", "Glory", "Hope", "Ideal", "Music", "Nowhere", "Open", "Poetry", "Quest", "Random", "Reverence", "Sorrow", "Temerity", "Torment", "Weary"
 ]
 DESCRIPTORS = [
-  "Destroyer", "Idiot", "Brave", "Dreamer", "Elder", "Younger", "Savant", "Drunk", "Nosepicker", "Fool", "Wiseperson", "Hooker", "Genius", "Madperson", "Callous", "Brave", "Coward", 'Con Artist', 'Jester', 'Nefarious', 'Hired Muscle', "Quick", "Burdened", "Heavy-Hearted", "Jovial", "Dramatic"
+  "Destroyer", "Idiot", "Brave", "Dreamer", "Elder", "Younger", "Savant", "Drunk", "Nosepicker", "Fool", "Wiseperson", "Hooker", "Genius", "Madperson", "Callous", "Brave", "Coward", 'Con Artist', 'Jester', 'Nefarious', 'Hired Muscle', "Quick", "Burdened", "Heavy-Hearted", "Jovial", "Dramatic", "Infamous", "Cruel", "Penniless", "Eunuch", "Kingslayer", "Patient", "Scholar", "Explorer"
 ]
 NAME_LIST = {
   "Dragonborn": {

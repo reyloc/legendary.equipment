@@ -1242,5 +1242,187 @@ Feature.create([
    :table => {},
    :race_id => '',
    :class_id => 6
+  },
+  {:name => "Divine Sense",
+   :description => "The presence of strong evil registers on your senses like a noxious odor, and powerful good rings like heavenly music in your ears. As an action, you can open your awareness to detect such forces. Until the end of your next turn, you know the location of any celestial, fiend, or undead within 60 feet of you that is not behind total cover. Vou know the type (celestial, fiend, or undead) of any being whose presence you sense, but not its identity (the vampire Count Strahd von Zarovich, for instance). Within the same radius, you also detect the presence of any place or object that has been consecrated or desecrated, as with the hallow spell. You can use this feature a number of times equal to 1 + your Charisma modifier. When you finish a long rest, you regain all expended uses.",
+   :table => {},
+   :race_id => '',
+   :class_id => 7
+  },
+  {:name => "Lay on Hands",
+   :description => "Your blessed touch can heal wounds. You have a pool of healing power that replenishes when you take a long rest. With that pool, you can restore a total number of hit points equal to your paladin level x 5. As an action, you can touch a creature and draw power from the pool to restore a number of hit points to that creature, up to the maximum amount remaining in your pool. Alternatively, you can expend 5 hit points from your pool of healing to cure the target of one disease or neutralize one poison affecting it. You can cure multiple diseases and neutralize multiple poisons with a single use of Lay on Hands, expending hit points separately for each one. This feature has no effect on undead and constructs.",
+   :table => {},
+   :race_id => '',
+   :class_id => 7
+  },
+  {:name => "Fighting Style",
+   :description => "At 2nd level, you adopt a style of fighting as your specialty. Choose one of the following options. You can't take a Fighting Style option more than once, even if you later get to choose again.",
+   :table => {
+     headers: ['Style', 'Description'],
+     rows: [
+       ['Defense', "While you are wearing armor, you gain a +1 bonus to AC."],
+       ['Dueling', "When you are wielding a melee weapon in one hand and no other weapon, you gain a +2 bonus to damage rolls with that weapon."],
+       ['Great Weapon Fighting', "When you roll a 1 or 2 on a damage die for an attack you make with a melee weapon that you are wielding with two hands, you can re-roll the die and must use the new roll. The weapon must have the two-handed or versatile property for you to gain this benefit."],
+       ['Protection', "When a creature you can see attacks a target other than you that is within 5 feet of you, you can use your reaction to impose disadvantage on the attack roll. You must be wielding a shield."],
+     ]
+   },
+   :race_id => '',
+   :class_id => 7
+  },
+  {:name => "Spellcasting",
+   :description => "By 2nd level, you have learned to draw on divine magic through meditation and prayer to cast spells as a cleric does. <br /><b>Preparing and Casting Spells</b> - The Paladin table shows how many spell slots you have to cast your spells. To cast one of your paladin spells of 1st level or higher, you must expend a slot of the spell's level or higher. You regain all expended spell slots when you finish a long rest. You prepare the list of paladin spells that are available for you to cast, choosing from the paladin spell list. When you do so, choose a number of paladin spells equal to your Charisma modifier + half your paladin level, rounded down (minimum of one spell). The spells must be of a level for which you have spell slots. For example, if you are a 5th-level paladin, you have four 1st-level and two 2nd-level spell slots. With a Charisma of 14, your list of prepared spells can include four spells of 1st or 2nd level, in any combination. If you prepare the 1st-level spell cure wounds, you can cast it using a 1st-level or a 2nd-level slot. Casting the spell doesn't remove it from your list of prepared spells. You can change your list of prepared spells when you finish a long rest. Preparing a new list of paladin spells requires time spent in prayer and meditation: at least I minute per spell level for each spell on your list.<br /><b>Spellcasting Ability</b> - Charisma is your spellcasting ability for your paladin spells, since their power derives from the strength of your convictions. You use your Charisma whenever a spell refers to your spellcasting ability. In addition, you use your Charisma modifier when setting the saving throw DC for a paladin spell you cast and when making an attack roll with one. <br /><b>Spell Save DC</b> = 8 + your proficiency bonus + your Charisma modifier<br /><b>Spell attack modifier</b> = your proficiency bonus + your Charisma modifier<br /><b>Spellcasting Focus</b> - You can use a holy symbol as a spellcasting focus for your paladin spells.",
+   :table => {},
+   :race_id => '',
+   :class_id => 7
+  },
+  {:name => "Divine Smite",
+   :description => "Starting at 2nd level, when you hit a creature with a melee weapon attack, you can expend one paladin spell slot to deal radiant damage to the target, in addition to the weapon's damage. The extra damage is 2d8 for a 1st-level spell slot, plus 1d8 for each spell level higher than 1st, to a maximum of 5d8. The damage increases by 1d8 if the target is an undead or a fiend.",
+   :table => {},
+   :race_id => '',
+   :class_id => 7
+  },
+  {:name => "Divine Health",
+   :description => "By 3rd level, the divine magic flowing through you makes you immune to disease.",
+   :table => {},
+   :race_id => '',
+   :class_id => 7
+  },
+  {:name => "Sacred Oath",
+   :description => "When you reach 3rd level, you swear the oath that binds you as a paladin forever. Up to this time you have been in a preparatory stage, committed to the path but not yet sworn to it. Now you choose the Oath of Devotion, the Oath of the Ancients, or the Oath of Vengeance, all detailed at the end of the class description. Your choice grants you features at 3rd level and again at 7th, 15th, and 20th level. Those features include oath spells and the Channel Divinity feature.",
+   :table => {
+     headers: ['Name', 'Description'],
+     rows: [
+      ['Oath Spells', "Each oath has a list of associated spells. You gain access to these spells at the levels specified in the oath description. Once you gain access to an oath spell, you always have it prepared. Oath spells don't count against the number of spells you can prepare each day. If you gain an oath spell that doesn't appear on the paladin spell list, the spell is nonetheless a paladin spell for you."],
+      ['Channel Divinity', "Your oath allows you to channel divine energy to fuel magical effects. Each Channel Divinity option provided by your oath explains how to use it. When you use your Channel Divinity, you choose which option to use. You must then finish a short or long rest to use your Channel Divinity again. Some Channel Divinity effects require saving throws. When you use such an effect from this class, the DC equals your paladin spell save DC."]
+     ]
+   },
+   :race_id => '',
+   :class_id => 7
+  },
+  {:name => "Ability Score Improvement",
+   :description => "When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
+   :table => {},
+   :race_id => '',
+   :class_id => 7
+  },
+  {:name => "Extra Attack",
+   :description => "Beginning at 5th level, you can attack twice, instead of once, whenever you take the Attack action on your turn.",
+   :table => {},
+   :race_id => '',
+   :class_id => 7
+  },
+  {:name => "Aura of Protection",
+   :description => "Starting at 6th level, whenever you or a friendly creature within 10 feet of you must make a saving throw, the creature gains a bonus to the saving throw equal to your Charisma modifier (with a minimum bonus of +1). You must be conscious to grant this bonus. At 18th level, the range of this aura increases to 30 feet.",
+   :table => {},
+   :race_id => '',
+   :class_id => 7
+  },
+  {:name => "Aura of Courage",
+   :description => "Starting at 10th level, you and friendly creatures within 10 feet of you can't be frightened while you are conscious. At 18th level, the range of this aura increases to 30 feet.",
+   :table => {},
+   :race_id => '',
+   :class_id => 7
+  },
+  {:name => "Improved Divine Smite",
+   :description => "By 11th level, you are so suffused with righteous might that all your melee weapon strikes carry divine power with them. Whenever you hit a creature with a melee weapon, the creature takes an extra 1d8 radiant damage. If you also use your Divine Smite with an attack, you add this damage to the extra damage of your Divine Smite.",
+   :table => {},
+   :race_id => '',
+   :class_id => 7
+  },
+  {:name => "Cleansing Touch",
+   :description => "Beginning at 14th level, you can use your action to end one spell on yourself or on one willing creature that you touch. You can use this feature a number of times equal to your Charisma modifier (a minimum of once). You regain expended uses when you finish a long rest.",
+   :table => {},
+   :race_id => '',
+   :class_id => 7
+  },
+  {:name => "Channel Divinity - Sacred Weapons",
+   :description => "When you take the oath at 3rd level, as an action, you can imbue one weapon that you are holding with positive energy, using your Channel Divinity. For I minute, you add your Charisma modifier to attack rolls made with that weapon (with a minimum bonus of +1). The weapon also emits bright light in a 20-foot radius and dim light 20 feel beyond that. If the weapon is not already magical, it becomes magical for the duration. You can end this effect on your turn as part of any other action. If you are no longer holding or carrying this weapon, or if you fall unconscious, this effect ends.",
+   :table => {},
+   :race_id => '',
+   :class_id => 7
+  },
+  {:name => "Channel Divinity - Turn the Unholy",
+   :description => "When you take the oath at 3rd level, as an action, you present your holy symbol and speak a prayer censuring fiends and undead, using your Channel Divinity. Each fiend or undead that can see or hear you within 30 feet of you must make a Wisdom saving throw. If the creature fails its saving throw, it is turned for 1 minute or until it takes damage. A turned creature must spend its turns trying to move as far away from you as it can, and it can't willingly move to a space within 30 feet of you. It also can't take reactions. For its action, it can use only the Dash action or try to escape from an effect that prevents it from moving. If there's nowhere to move, the creature can use the Dodge action.",
+   :table => {},
+   :race_id => '',
+   :class_id => 7
+  },
+  {:name => "Aura of Devotion",
+   :description => "Starting at 7th level, you and friendly creatures within 10 feet of you can't be charmed while you are conscious. At 18th level,the range of this aura increases to 30 feet.",
+   :table => {},
+   :race_id => '',
+   :class_id => 7
+  },
+  {:name => "Purity of Spirit",
+   :description => "Beginning at 15th level, you are always under the effects of a protection from evil and good spell.",
+   :table => {},
+   :race_id => '',
+   :class_id => 7
+  },
+  {:name => "Holy Nimbus",
+   :description => "At 20th level, as an action, you can emanate an aura of sunlight. For 1 minute, bright light shines from you in a 30-foot radius, and dim light shines 30 feet beyond that. Whenever an enemy creature starts its turn in the bright light, the creature takes 10 radiant damage. In addition, for the duration, you have advantage on saving throws against spells cast by fiends or undead. Once you use this feature, you can't use it again until you finish a long rest.",
+   :table => {},
+   :race_id => '',
+   :class_id => 7
+  },
+  {:name => "Channel Divinity - Nature's Wrath",
+   :description => "When you take the oath at 3rd level, you can use your Channel Divinity to invoke primeval forces to ensnare a foe. As an action, you can cause spectral vines to spring up and reach for a creature within 10 feet of you that you can see. The creature must succeed on a Strength or Dexterity saving throw (its choice) or be restrained. While restrained by the vines, the creature repeats the saving throw at the end of each of its turns. On a success, it frees itself and the vines vanish.",
+   :table => {},
+   :race_id => '',
+   :class_id => 7
+  },
+  {:name => "Channel Divinity - Turn the Faithless",
+   :description => "When you take the oath at 3rd level, you can use your Channel Divinity to utter ancient words that are painful for fey and fiends to hear. As an action, you present your holy symbol, and each fey or fiend within 30 feet of you that can hear you must make a Wisdom saving throw. On a failed save, the creature is turned for 1 minute or until it takes damage. A turned creature must spend its turns trying to move as far away from you as it can, and it can't willingly move to a space within 30 feet of you. It also can't take reactions. For its action, it can use only the Dash action or try to escape from an effect that prevents it from moving. If there's nowhere to move, the creature can use the Dodge action. If the creature's true form is concealed by an illusion, shape-shifting, or other effect, that form is revealed while it is turned.",
+   :table => {},
+   :race_id => '',
+   :class_id => 7
+  },
+  {:name => "Aura of Warding",
+   :description => "Beginning at 7th level, ancient magic lies so heavily upon you that it forms an eldritch ward. You and friendly creatures within 10 feet of you have resistance to damage from spells. At 18th level, the range of this aura increases to 30 feet.",
+   :table => {},
+   :race_id => '',
+   :class_id => 7
+  },
+  {:name => "Undying Sentinel",
+   :description => "Starting at 15th level, when you are reduced to O hit points and are not killed outright, you can choose to drop to 1 hit point instead. Once you use this ability, you can't use it again until you finish a long rest. Additionally, you suffer none of the drawbacks of old age, and you can't be aged magically.",
+   :table => {},
+   :race_id => '',
+   :class_id => 7
+  },
+  {:name => "Elder Champion",
+   :description => "At 20th level, you can assume the form of an ancient force of nature, taking on an appearance you choose. For example, your skin might turn green or take on a bark-like texture, your hair might become leafy or moss-like, or you might sprout antlers or a lion-like mane. Using your action, you undergo a transformation. For 1 minute, you gain the following benefits:<ul><li>At the start of each of your turns, you regain 10 hit points.</li><li>Whenever you cast a paladin spell that has a casting time of 1 action, you can cast it using a bonus action instead.</li><li>Enemy creatures within 10 feet of you have disadvantage on saving throws against your paladin spells and Channel Divinity options.</li></ul>Once you use this feature, you can't use it again until you finish a long rest.",
+   :table => {},
+   :race_id => '',
+   :class_id => 7
+  },
+  {:name => "Channel Divinity - Abjure Enemy",
+   :description => "When you take the oath at 3rd level, as an action, you present your holy symbol and speak a prayer of denunciation, using your Channel Divinity. Choose one creature within 60 feet of you that you can see. That creature must make a Wisdom saving throw, unless it is immune to being frightened. Fiends and undead have disadvantage on this saving throw. On a failed save, the creature is frightened for I minute or until It takes any damage. While frightened, the creature's speed is O, and It can't benefit from any bonus to its speed. On a successful save, the creature's speed is halved for 1 minute or until the creature takes any damage.",
+   :table => {},
+   :race_id => '',
+   :class_id => 7
+  },
+  {:name => "Channel Divinity - Vow of Enmity",
+   :description => "When you take the oath at 3rd level, as a bonus action, you can utter a vow of enmity against a creature you can see within 10 feet of you, using your Channel Divinity. You gain advantage on attack rolls against the creature for 1 minute or until it drops to O hit points or falls unconscious.",
+   :table => {},
+   :race_id => '',
+   :class_id => 7
+  },
+  {:name => "Relentless Avenger",
+   :description => "By 7th level, your supernatural focus helps you dose off a foe's retreat. When you hit a creature with an opportunity attack, you can move up to half your speed immediately after the attack and as part of the same reaction. This movement doesn't provoke opportunity attacks.",
+   :table => {},
+   :race_id => '',
+   :class_id => 7
+  },
+  {:name => "Soul of Vengeance",
+   :description => "Starting at 15th level, the authority with which you speak your Vow of Enmity gives you greater power over your foe. When a creature under the effect of your Vow of Enmity makes an attack, you can use your reaction to make a melee weapon attack against that creature if it is within range.",
+   :table => {},
+   :race_id => '',
+   :class_id => 7
+  },
+  {:name => "Avenging Angel",
+   :description => "At 20th level, you can assume the form of an angelic avenger. Using your action, you undergo a transformation. For 1 hour, you gain the following benefits:<ul><li>Wings sprout from your back and grant you a flying speed of 60 feet.</li><li>You emanate an aura of menace in a 30-foot radius. The first time any enemy creature enters the aura or starts its turn there during a battle, the creature must succeed on a Wisdom saving throw or become frightened of you for 1 minute or until it takes any damage. Attack rolls against the frightened creature have advantage.</li></ul>Once you use this feature, you can't use it again until you finish a long rest.",
+   :table => {},
+   :race_id => '',
+   :class_id => 7
   }
 ])

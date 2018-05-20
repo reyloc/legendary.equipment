@@ -175,5 +175,50 @@ ClassPath.create([
    :feats => [177,178],
    :table => {},
    :char_class_id => 6
+  },
+  {:name => 'Oath of Devotion',
+   :description => "The Oath of Devotion binds a paladin to the loftiest ideals of justice, virtue, and order. Sometimes called cavaliers, white knights, or holy warriors, these paladins meet the ideal of the knight in shining armor, acting with honor in pursuit of justice and the greater good. They hold themselves to the highest standards of conduct, and some, for better or worse, hold the rest of the world to the same standards. Many who swear this oath are devoted to gods of law and good and use their gods' tenets as the measure of their devotion. They hold angels-the perfect servants of good-as their ideals, and incorporate images of angelic wings into their helmets or coats of arms.<br /><b>Tenets of Devotion</b> - Though the exact words and strictures of the Oath of Devotion vary, paladins of this oath share these tenets.<ul><li><b>Honesty</b> - Don't lie or cheat. Let your word be your promise</li><li><b>Courage</b> - Never fear to act, though caution is wise.</li><li><b>Compassion</b> - Aid others, protect the weak, and punish those who threaten them. Show mercy to your foes, but temper it with wisdom.</li><li><b>Honor</b> - Treat others with fairness, and let your honorable deeds be an example to them. Do as much good as possible while causing the least amount of harm.</li><li><b>Duty</b> - Be responsible for your actions and their consequences, protect those entrusted to your care, and obey those who have authority over you.</li></ul>",
+   :feats => [192,193,194,195,196],
+   :table => {
+     headers: ['Paladin Level', 'Spells'],
+     rows: [
+       ['3rd', "Protection From Evil and Good, Sanctuary"],
+       ['5th', "Lesser Restoration, Zone of Truth"],
+       ['9th', "Beacon of Hope, Dispel Magic"],
+       ['13th', "Freedom of Movement, Guardian of Faith"],
+       ['17th', "Commune, Flame Strike"]
+     ]
+   },
+   :char_class_id => 7
+  },
+  {:name => 'Oath of the Ancients',
+   :description => "The Oath of the Ancients is as old as the race of elves and the rituals of the druids. Sometimes called fey knights, green knights, or horned knights, paladins who swear this oath cast their lot with the side of the light in the cosmic struggle against darkness because they love the beautiful and life-giving things of the world, not necessarily because they believe in principles of honor, courage, and justice. They adorn their armor and clothing with images of growing things-leaves, antlers, or flowers-to reflect their commitment to preserving life and light in the world.<br /><b>Tenets of the Ancients</b> - The tenets of the Oath of the Ancients have been preserved for uncounted centuries. This oath emphasizes the principles of good above any concerns of law or chaos. Its four central principles are simple.<ul><li><b>Kindle the Light</b> - Through your acts of mercy, kindness, and forgiveness, kindle the light of hope in the world, beating back despair.</li><li><b>Shelter the Light</b> - Where there is good, beauty, love, and laughter in the world, stand against the wickedness that would swallow it. Where life flourishes, stand against the forces that would render it barren.</li><li><b>Preserve Your Own Light</b> - Delight in song and laughter, in beauty and art. If you allow the light to die in your own heart, you can't preserve it in world.</li><li><b>Be the Light</b> - Be a glorious beacon for all who live in despair. Let the light of your joy and courage shine forth in all your deeds.</li></ul>",
+   :feats => [197,198,199,200,201],
+   :table => {
+     headers: ['Paladin Level', 'Spells'],
+     rows: [
+       ['3rd', "Ensnaring Strike, Speak with Animals"],
+       ['5th', "Moonbeam, Misty Step"],
+       ['9th', "Plant Growth, Protection From Energy"],
+       ['13th', "Ice Storm, Stoneskin"],
+       ['17th', "Commune with Nature, Tree Stride"]
+     ]
+   },
+   :char_class_id => 7
+  },
+  {:name => 'Oath of Vengeance',
+   :description => "The Oath of Vengeance is a solemn commitment to punish those who have committed a grievous sin. When evil forces slaughter helpless villagers, when an entire people turns against the will of the gods. when a thieves' guild grows to a violent and powerful, when a dragon rampages through the countryside-at times like these, paladins arise and swear an Oath of Vengeance to set right that which has gone wrong. To these paladins- sometimes called avengers or dark knights-their own purity is not as important as delivering justice.<br /><b>Tenets of Vengeance</b> - The tenets of the Oath of Vengeance vary by paladin, but all the tenets revolve around punishing wrongdoers by any means necessary. Paladins who uphold these tenets are willing to sacrifice even their own righteousness to mete out justice upon those who do evil, so the paladins are often neutral or lawful neutral in alignment. The core principles of the tenets are brutally simple.<ul><li><b>Fight the Greater Evil</b> - Face with a choice of fighting my sworn foes or combating a lesser evil, I choose the greater evil.</li><li><b>No Mercy for the Wicked</b> - Ordinary foes might win my mercy, but my sworn enemies do not.</li><li><b>By Any Means Necessary</b> - My qualms can't get in the way of exterminating my foes.</li><li><b>Restitution</b> - If my foes wreak ruin on the world, it is because I failed to stop them. I must help those harmed by their misdeeds.</li></ul>",
+   :feats => [202,203,204,205,206],
+   :table => {
+     headers: ['Paladin Level', 'Spells'],
+     rows: [
+       ['3rd', "Bane, Hunter's Mark"],
+       ['5th', "Hold Person, Misty Step"],
+       ['9th', "Haste, Protection From Energy"],
+       ['13th', "Banishment, Dimension Door"],
+       ['17th', "Hold Monster, Scrying"]
+     ]
+   },
+   :char_class_id => 7
   }
 ])

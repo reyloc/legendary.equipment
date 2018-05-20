@@ -112,7 +112,7 @@
   <% @paths.each do |path| %>
     <div class='path'>
       <div class='path_name'><%= path.name %></div>
-      <div class='path_desc'><%= path.description %></div>
+      <div class='path_desc'><%= raw path.description %></div>
       Features<ul>
         <% path.feats.each do |id| %>
           <% feat = @features.select{|f|f.id == id}.first %>

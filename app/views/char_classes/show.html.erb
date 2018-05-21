@@ -98,8 +98,8 @@
     <tbody>
       <% @charclass.class_levels.each do |lvl| %>
         <tr>
-          <td><%= lvl.level.ordinalize %></td>
-          <td><%= sprintf("%+d", lvl.prof_bonus) %></td>
+          <td align='center'><%= lvl.level.ordinalize %></td>
+          <td align='center'><%= sprintf("%+d", lvl.prof_bonus) %></td>
           <td>
             <% lvl.features.each_with_index do |id, i| %>
               <% feat = @features.select{|f|f.id == id}.first %>
@@ -108,7 +108,7 @@
             <% end %>
           </td>
           <% lvl.info.to_h.each do |k,v| %>
-            <td><%= v %></td>
+            <td align='center'><%= v %></td>
           <% end %>
         </tr>
       <% end %>

@@ -356,11 +356,48 @@ CharClass.create([
    :fund_modifier => 10,
    :fund_roll => '4d4'
   },
+  {:name => "Sorcerer",
+   :description => "A spellcaster who draws on inherent magic from a gift or bloodline",
+   :image => 'sorcerer.jpg',
+   :primary_ability => 'Cha',
+   :bio => "Golden eyes flashing, a human stretches out her hand and unleashes the dragonfire that burns in her veins. As an inferno rages around her foes, leathery wings spread from her back and she takes to the air. Long hair whipped by a conjured wind, a half-elf spreads his arms wide and throws his head back. Lifting him momentarily off the ground. a wave of magic surges up in him, through him, and out from him in a mighty blast of lightning. Crouching behind a stalagmite, a halfling points a finger at a charging troglodyte. A blast of fire springs from her finger to strike the creature. She ducks back behind the rock formation with a grin, unaware that her wild magic has turned her skin bright blue. Sorcerers carry a magical birthright conferred upon them by an exotic bloodline, some otherworldly influence. or exposure to unknown cosmic forces. One can't study sorcery as one learns a language, any more than one can learn to live a legendary life. No one chooses sorcery; the power chooses the sorcerer.",
+   :saving_throws => ['Con', 'Cha'],
+   :hit_dice => '1d6',
+   :hp_at_first_level => 6,
+   :hp_at_first_level_attribute => 'Con',
+   :hp_at_higher_levels => '1d6',
+   :hp_at_higher_levels_min => 4,
+   :hp_at_higher_levels_attribute => 'Con',
+   :starting_equipment => {items: [
+     {choices: [
+       {quantity: [1,20], items: ['Light Crossbow', 'Bolt']},
+       {quantity: 1, items: ['Any Simple Weapon']}
+     ]},
+     {choices: [
+       {quantity: 1, items: ["Component Pouch"]},
+       {quantity: 1, items: ["Arcane Focus"]}
+     ]},
+     {choices: [
+       {quantity: 1, items: ["Explorer's Pack"]},
+       {quantity: 1, items: ["Dungeoneer's Pack"]}
+     ]},
+     {choices: [
+       {quantity: 2, items: ['Dagger']}
+     ]}
+   ]},
+   :armor_prof => [],
+   :weapon_prof => ['Daggers', 'Darts', 'Slings', 'Quarterstaffs', 'Light Crossbows'],
+   :skill_prof => 2,
+   :tool_prof => [],
+   :skill_prof_choices => [3,5,7,8,14,15],
+   :fund_modifier => 10,
+   :fund_roll => '3d4'
+  },
   {:name => "Warlock",
    :description => "A wielder of magic that is derived from a bargain with an extraplanar entity",
    :image => 'warlock.jpg',
    :primary_ability => 'Cha',
-   :bio => "Golden eyes flashing, a human stretches out her hand and unleashes the dragonfire that burns in her veins. As an inferno rages around her foes, leathery wings spread from her back and she takes to the air. Long hair whipped by a conjured wind, a half-elf spreads his arms wide and throws his head back. Lifting him momentarily off the ground. a wave of magic surges up in him, through him, and out from him in a mighty blast of lightning. Crouching behind a stalagmite, a halfling points a finger at a charging troglodyte. A blast of fire springs from her finger to strike the creature. She ducks back behind the rock formation with a grin, unaware that her wild magic has turned her skin bright blue. Sorcerers carry a magical birthright conferred upon them by an exotic bloodline, some otherworldly influence. or exposure to unknown cosmic forces. One can't study sorcery as one learns a language, any more than one can learn to live a legendary life. No one chooses sorcery; the power chooses the sorcerer.",
+   :bio => "With a pseudo-dragon curled on his shoulder, a young elf in golden robes smiles warmly, weaving a magical charm into his honeyed words and bending the palace sentinel to his will. As flames spring to life in her hands, a wizened human whispers the secret name of her demonic patron, infusing her spell with fiendish magic. Shifting his gaze between a battered tome and the odd alignment of the stars overhead, a wild-eyed tiefling chants the mystic ritual that will open a doorway to a distant world, Warlocks are seekers of the knowledge that lies hidden in the fabric of the multiverse, Through pacts made with mysterious beings of supernatural power, warlocks unlock magical effects both subtle and spectacular. Drawing on the ancient knowledge of beings such as fey nobles, demons, devils, hags, and alien entities of the Far Realm, warlocks piece together arcane secrets to bolster their own power.",
    :saving_throws => ['Wis', 'Cha'],
    :hit_dice => '1d8',
    :hp_at_first_level => 8,

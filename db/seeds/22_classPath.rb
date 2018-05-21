@@ -232,5 +232,35 @@ ClassPath.create([
    :feats => [235,236,237,238],
    :table => {},
    :char_class_id => 8
+  },
+  {:name => 'Thief',
+   :description => "You hone your skills in the larcenous arts. Burglars, bandits, cut-purses, and other criminals typically follow this archetype, but so do rogues who prefer to think of themselves as professional treasure seekers, explorers, delvers, and investigators. In addition to improving your agility and stealth, you learn skills useful for delving into ancient ruins, reading unfamiliar languages, and using magic items you normally couldn't employ",
+   :feats => [252,253,254,255,256],
+   :table => {},
+   :char_class_id => 9
+  },
+  {:name => 'Assassin',
+   :description => "You focus your training on the grim art of death. Those who adhere to this archetype are diverse: hired killers, spies, bounty hunters, and even specially anointed priests trained to exterminate the enemies of their deity. Stealth, poison, and disguise help you eliminate your foes with deadly efficiency.",
+   :feats => [257,258,259,260,261],
+   :table => {},
+   :char_class_id => 9
+  },
+  {:name => 'Arcane Trickster',
+   :description => "Some rogues enhance their fine-honed skills of stealth and agility with magic, learning tricks of enchantment and illusion. These rogues include pickpockets and burglars, but also pranksters, mischief-makers, and a significant number of adventurers.",
+   :feats => [262,263,264,265,266],
+   :table => {},
+   :char_class_id => 9
+  },
+  {:name => 'Draconic Bloodline',
+   :description => "Your innate magic comes from draconic magic that was mingled with your blood or that of your ancestors. Most often, sorcerers with this origin trace their descent back to a mighty sorcerer of ancient times who made a bargain with a dragon or who might even have claimed a dragon parent. Some of these bloodlines are well established in the world, but most are obscure. Any given sorcerer could be the first of a new bloodline, as a result of a pact or some other exceptional circumstance.",
+   :feats => [281,282,283,284,285],
+   :table => {},
+   :char_class_id => 10
+  },
+  {:name => 'Wild Magic',
+   :description => "Your innate magic comes from the wild forces of chaos that underlie the order of creation. You might have endured exposure to some form of raw magic, perhaps through a planar portal leading to Limbo, the Elemental Planes, or the mysterious Far Realm. Perhaps you were blessed by a powerful fey creature or marked by a demon. Or your magic could be a fluke of your birth, with no apparent cause or reason. However it came to be, this chaotic magic churns within you, waiting for any outlet.",
+   :feats => [286,285,287,288,289,290],
+   :table => {},
+   :char_class_id => 10
   }
 ])

@@ -220,5 +220,17 @@ ClassPath.create([
      ]
    },
    :char_class_id => 7
+  },
+  {:name => 'Hunter',
+   :description => "Emulating the Hunter archetype means accepting your place as a bulwark between civilization and the terrors of the wilderness. As you walk the Hunter's path, you learn specialized techniques for fighting the threats you face, from rampaging ogres and hordes of ores to towering giants and terrifying dragons.",
+   :feats => [220,221,222,223,224,225,226,227,228,229,230,231,232,233,234],
+   :table => {},
+   :char_class_id => 8
+  },
+  {:name => 'Beast Master',
+   :description => "The Beast Master archetype embodies a friendship between the civilized races and the beasts of the world. United in focus, beast and ranger work as one to fight the monstrous foes that threaten civilization and the wilderness alike. Emulating the Beast Master archetype means committing yourself to this ideal, working in partnership with all animal as its companion and friend.",
+   :feats => [235,236,237,238],
+   :table => {},
+   :char_class_id => 8
   }
 ])

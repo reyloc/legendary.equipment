@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   resources 'char_classes', :except => [:update, :new, :edit, :destroy, :create]
   resources 'conditions', :except => [:update, :new, :edit, :destroy, :create]
   resources 'deities', :except => [:update, :new, :edit, :destroy, :create]
+  resources 'eldritch_invocations', :except => [:update, :new, :edit, :destroy, :create]
   resources 'feats', :except => [:update, :new, :edit, :destroy, :create]
   resources 'features', :except => [:update, :new, :edit, :destroy, :create]
   resources 'gears', :except => [:update, :new, :edit, :destroy, :create]

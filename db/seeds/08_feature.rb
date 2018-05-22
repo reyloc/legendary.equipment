@@ -2036,5 +2036,182 @@ Feature.create([
    :table => {},
    :race_id => '',
    :class_id => 10
+  },
+  {:name => "Otherwordly Patron",
+   :description => "At 1st level, you have struck a bargain with an otherworldly being of your choice: the Archfey, the Fiend, or the Great Old One. Your choice grants you features at 1st level and again at 61h, 101h, and 141h levels.",
+   :table => {},
+   :race_id => '',
+   :class_id => 11
+  },
+  {:name => "Pact Magic",
+   :description => "Your arcane research and the magic bestowed on you by your patron have given you facility with spells.<br /><b>Cantrips</b> - You know two cantrips of your choice from the warlock spell list. You learn additional warlock cantrips of your choice at higher leveis.<br /><b>Spell Slots</b> - To cast one of your warlock spells of 1st level or higher, you must expend a spell slot. You regain all expended spell slots when you finish a short or long rest. For example, when you are 5th level, you have two 3rd-level spell slots. To cast the 1sl-level spell thunderwave, you must spend one of those slots, and you cast it as a 3rd-level spell.<br /><b>Spells Known of 1st Level and Higher</b> - At 1st level, you know two 1st-level spells of your choice from the warlock spell list. When you reach 6th level, for example, you learn a new warlock spell, which can be 1st, 2nd, or 3rd level. Additionally, when you gain a level in this class, you can choose one of the warlock spells you know and replace it with another spell from the warlock spell list, which also must be of a level for which you have spell slots.<br /><b>Spellcasting Ability</b> - Charisma is your spellcasting ability for your warlock spells, so you use your Charisma whenever a spell refers to your spellcasting ability. In addition, you use your Charisma modifier when setting the saving throw DC for a warlock spell you cast and when making an attack roll with one.<br /><b>Spell Save DC</b> = 8 + your proficiency your Charisma modifier<br /><b>Spell attack modifier</b> = your proficiency bonus + your Charisma modifier<br /><b>Spellcasting Focus</b> - You can use an arcane focus as a spellcasting focus for your warlock spells.",
+   :table => {},
+   :race_id => '',
+   :class_id => 11
+  },
+  {:name => "Eldritch Invocations",
+   :description => "In your study of occult lore, you have unearthed eldritch invocations, fragments of forbidden knowledge that imbue you with an abiding magical ability. At 2nd level, you gain two eldritch invocations of your choice. When you gain certain warlock levels, you gain additional invocations of your choice. Additionally, when you gain a level in this class, you can choose one of the invocations you know and replace it with another invocation that you could learn at that level.",
+   :table => {},
+   :race_id => '',
+   :class_id => 11
+  },
+  {:name => "Pact Boon",
+   :description => "At 3rd level, your otherworldly patron bestows a gift upon you for your loyal service. You gain the feature Pact of the Chain, Pact of the Blade, or Pact of the Tomb.",
+   :table => {},
+   :race_id => '',
+   :class_id => 11
+  },
+  {:name => "Pact of the Chain",
+   :description => "You learn the Find Familiar spell and can cast it as a ritual. The spell doesn’t count against your number of Spells known. When you cast the spell, you can choose one of the normal forms for your familiar or one of the following Special forms: imp, Pseudodragon, Quasit, or Sprite. Additionally, when you take the Attack action, you can forgo one of your own attacks to allow your familiar to make one Attack of its own with its reaction.",
+   :table => {},
+   :race_id => '',
+   :class_id => 11
+  },
+  {:name => "Pact of the Blade",
+   :description => "You can use your action to create a pact weapon in your empty hand. You can choose the form that this melee weapon takes each time you create it. You are proficient with it while you wield it. This weapon counts as magical for the purpose of overcoming Resistance and immunity to nonmagical attacks and damage. Your pact weapon disappears if it is more than 5 feet away from you for 1 minute or more. It also disappears if you use this feature again, if you dismiss the weapon (no action required), or if you die. You can transform one Magic Weapon into your pact weapon by performing a Special ritual while you hold the weapon. You perform the ritual over the course of 1 hour, which can be done during a Short Rest. You can then dismiss the weapon, shunting it into an extradimensional space, and it appears whenever you create your pact weapon thereafter. You can’t affect an artifact or a sentient weapon in this way. The weapon ceases being your pact weapon if you die, if you perform the 1-hour ritual on a different weapon, or if you use a 1-hour ritual to break your bond to it. The weapon appears at your feet if it is in the extradimensional space when the bond breaks.",
+   :table => {},
+   :race_id => '',
+   :class_id => 11
+  },
+  {:name => "Pact of the Tomb",
+   :description => "Your patron gives you a grimoire called a Book of Shadows. When you gain this feature, choose three Cantrips from any class’s spell list (the three needn’t be from the same list). While the book is on your person, you can cast those Cantrips at will. They don’t count against your number of Cantrips known. If they don’t appear on the warlock spell list, they are nonetheless warlock Spells for you. If you lose your Book of Shadows, you can perform a 1-hour ceremony to receive a replacement from your patron. This ceremony can be performed during a short or Long Rest, and it destroys the previous book. The book turns to ash when you die.",
+   :table => {},
+   :race_id => '',
+   :class_id => 11
+  },
+  {:name => "Ability Score Improvement",
+   :description => "When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two Ability Scores of your choice by 1. As normal, you can’t increase an ability score above 20 using this feature.",
+   :table => {},
+   :race_id => '',
+   :class_id => 11
+  },
+  {:name => "Mystic Arcanum",
+   :description => "At 11th level, your patron bestows upon you a magical secret called an arcanum. Choose one 6th-level spell from the warlock spell list as this arcanum. You can cast your arcanum spell once without expending a spell slot. You must finish a Long Rest before you can do so again. At higher levels, you gain more warlock Spells of your choice that can be cast in this way: one 7th-level spell at 13th level, one 8th-level spell at 15th level, and one 9th-level spell at 17th level. You regain all uses of your Mystic Arcanum when you finish a long rest.",
+   :table => {},
+   :race_id => '',
+   :class_id => 11
+  },
+  {:name => "Eldritch Master",
+   :description => "At 20th level, you can draw on your inner reserve of mystical power while entreating your patron to regain expended Spell Slots. You can spend 1 minute entreating your patron for aid to regain all your expended Spell Slots from your Pact Magic feature. Once you regain Spell Slots with this feature, you must finish a Long Rest before you can do so again.",
+   :table => {},
+   :race_id => '',
+   :class_id => 11
+  },
+  {:name => "Expanded Spell List",
+   :description => "The Archfey lets you choose from an expanded list of spells when you learn a warlock spell. The following spells are added to the warlock spell list for you.",
+   :table => {
+     headers: ['Spell Level', 'Spells'],
+     rows: [
+       ['1st', "Faerie Fire, Sleep"],
+       ['2nd', "Calm Emotions, Phantasmal Force"],
+       ['3rd', "Blink, Plant Growth"],
+       ['4th', "Dominate Beast, Greater Invisibility"],
+       ['5th', "Dominate Person, Seeming"],
+     ]
+   },
+   :race_id => '',
+   :class_id => 11
+  },
+  {:name => "Fey Presence",
+   :description => "Starting at 1st level, your patron bestows upon you the ability to project the beguiling and fearsome presence of the fey. As an action, you can cause each creature in a 10-foot cube originating from you to make a Wisdom saving throw against your warlock spell save DC. The creatures that fail their saving throws are all charmed or frightened by you (your choice) until the end of your next turn. Once you use this feature, you can't use it again until you finish a short or long rest.",
+   :table => {},
+   :race_id => '',
+   :class_id => 11
+  },
+  {:name => "Misty Escape",
+   :description => "Starting at 6th level, you can vanish in a puff of mist in response to harm. When you take damage, you can use your reaction to turn invisible and teleport up to 60 feet to an unoccupied space you can see. You remain invisible until the start of your next turn or until you attack or cast a spell. Once you use this feature, you can't use it again until you finish a short or long rest.",
+   :table => {},
+   :race_id => '',
+   :class_id => 11
+  },
+  {:name => "Beguiling Defenses",
+   :description => "Beginning at 10th level, your patron teaches you how to turn the mind-affecting magic of your enemies against them. You are immune to being charmed, and when another creature attempts to charm you, you can use your reaction to attempt to turn the charm back on that creature. The creature must succeed on a Wisdom saving throw against your warlock spell save DC or be charmed by you for 1 minute or until the creature takes any damage.",
+   :table => {},
+   :race_id => '',
+   :class_id => 11
+  },
+  {:name => "Dark Delirium",
+   :description => "Starting at 14th level, you can plunge a creature into an illusory realm. As an action, choose a creature that you can see within 60 feet of you. It must make a Wisdom saving throw against your warlock spell save DC. On a failed save, it is charmed or frightened by you (your choice) for 1 minute or until your concentration is broken (as if you are concentrating on a spell). This effect ends early if the creature takes any damage. Until this illusion ends, the creature thinks it is lost in a misty realm, the appearance of which you choose. The creature can see and hear only itself, you, and the illusion. You must finish a short or long rest before you can use this feature again.",
+   :table => {},
+   :race_id => '',
+   :class_id => 11
+  },
+  {:name => "Expanded Spell List",
+   :description => "The Fiend lets you choose from an expanded list of Spells when you learn a warlock spell. The following Spells are added to the warlock spell list for you.",
+   :table => {
+     headers: ['Spell Level', 'Spells'],
+     rows: [
+       ['1st', "Burning Hands, Command"],
+       ['2nd', "Blindness/Deafness, Scorching Ray"],
+       ['3rd', "Fireball, Stinking Cloud"],
+       ['4th', "Fire Shield, Wall of Fire"],
+       ['5th', "Flame Strike, Hallow"],
+     ]
+   },
+   :race_id => '',
+   :class_id => 11
+  },
+  {:name => "Dark One’s Blessing",
+   :description => "Starting at 1st level, when you reduce a hostile creature to 0 hit points, you gain Temporary Hit Points equal to your Charisma modifier + your warlock level (minimum of 1).",
+   :table => {},
+   :race_id => '',
+   :class_id => 11
+  },
+  {:name => "Dark One’s Own Luck",
+   :description => "Starting at 6th level, you can call on your patron to alter fate in your favor. When you make an ability check or a saving throw, you can use this feature to add a d10 to your roll. You can do so after seeing the initial roll but before any of the roll’s effects occur. Once you use this feature, you can’t use it again until you finish a short or long rest.",
+   :table => {},
+   :race_id => '',
+   :class_id => 11
+  },
+  {:name => "Fiendish Resilience",
+   :description => "Starting at 10th level, you can choose one damage type when you finish a short or Long Rest. You gain Resistance to that damage type until you choose a different one with this feature. Damage from magical Weapons or silver Weapons ignores this Resistance.",
+   :table => {},
+   :race_id => '',
+   :class_id => 11
+  },
+  {:name => "Hurl Through Hell",
+   :description => "Starting at 14th level, when you hit a creature with an Attack, you can use this feature to instantly transport the target through the lower planes. The creature disappears and hurtles through a Nightmare landscape. At the end of your next turn, the target returns to the space it previously occupied, or the nearest unoccupied space. If the target is not a fiend, it takes 10d10 psychic damage as it reels from its horrific experience. Once you use this feature, you can’t use it again until you finish a long rest.",
+   :table => {},
+   :race_id => '',
+   :class_id => 11
+  },
+  {:name => "Expanded Spell List",
+   :description => "The Great One lets you choose from an expanded list of Spells when you learn a warlock spell. The following Spells are added to the warlock spell list for you.",
+   :table => {
+     headers: ['Spell Level', 'Spells'],
+     rows: [
+       ['1st', "Dissonant Whispers, Tasha's Hideous Laughter"],
+       ['2nd', "Detect Thoughts, Phantasmal Force"],
+       ['3rd', "Clairvoyance, Sending"],
+       ['4th', "Dominate Beast, Evar's Black Tentacles"],
+       ['5th', "Dominate Person, Telekinesis"],
+     ]
+   },
+   :race_id => '',
+   :class_id => 11
+  },
+  {:name => "Awakened Mind",
+   :description => "Starting at 1st level, your alien knowledge gives you the ability to touch the minds of other creatures. You can communicate telepathically with any creature you can see within 30 feet of you. You don't need to share a language with the creature for it to understand your telepathic utterances, but the creature must be able to understand at least one language.",
+   :table => {},
+   :race_id => '',
+   :class_id => 11
+  },
+  {:name => "Entropic Ward",
+   :description => "At 6th level, you learn to magically ward yourself against attack and to turn an enemy's failed strike into good luck for yourself, When a creature makes an attack roll against you, you can use your reaction to impose disadvantage on that roll. If the attack misses you, your next attack roll against the creature has advantage if you make it before the end of your next turn. Once you use this feature, you can't use it again until you finish a short or long rest.",
+   :table => {},
+   :race_id => '',
+   :class_id => 11
+  },
+  {:name => "Thought Shield",
+   :description => "Starting at 10th level, your thoughts can't be read by telepathy or other means unless you allow it. You also have resistance to psychic damage, and whenever a creature deals psychic damage to you, that creature takes the same amount of damage that you do.",
+   :table => {},
+   :race_id => '',
+   :class_id => 11
+  },
+  {:name => "Create Thrall",
+   :description => "At 14th level, you gain the ability to infect a humanoid's mind with the alien magic of your patron. You can use your action to touch an incapacitated humanoid. That creature is then charmed by you until a remove curse spell is cast on it, the charmed condition is removed from it, or you use this feature again. You can communicate telepathically with the charmed creature as long as the two of you are on the same plane of existence.",
+   :table => {},
+   :race_id => '',
+   :class_id => 11
   }
 ])

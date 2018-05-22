@@ -1,0 +1,7 @@
+<h1><%= @invocation.name %></h1>
+<div>
+  <ul>
+    <% unless @invocation.preq.empty? %><li><b>Prerequisite:</b> <%= @invocation.preq %></li><% end %>
+    <li><b>Description:</b> <%= @invocation.description %></li>
+  </ul>
+</div>

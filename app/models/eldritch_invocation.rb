@@ -1,0 +1,2 @@
+class EldritchInvocation < ApplicationRecord
+end

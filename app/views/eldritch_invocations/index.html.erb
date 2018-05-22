@@ -1,0 +1,8 @@
+<h1>Eldritch Invocations</h1>
+<div>
+  <ul>
+    <% @invocations.each do |i| %>
+      <li><%= link_to i.name, eldritch_invocation_path(i.id) %></li>
+    <% end %>
+  </ul>
+</div>

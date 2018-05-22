@@ -1,4 +1,5 @@
 <% features_to_desc = Array.new %>
+<% invocations = false %>
 <h1><%= @charclass.name %></h1>
 <div class='text-center'>
   <%= image_tag @charclass.image, class: 'rounded', alt: @charclass.name, size: '277x400' %>
@@ -161,8 +162,25 @@
   <h3>Short Feature Description (click link for more info)</h3>
   <ul>
   <% features_to_desc.sort.uniq.each do |feat| %>
+     <% invocations = true if feat.name == 'Eldritch Invocations' %>
     <li><%= link_to feat.name, feature_path(feat.id) %>: <%== feat.description %></li>
   <% end %>
+  </ul>
+</div>
+<% end %>
+<% if invocations %>
+<div class='attribute-border'></div>
+<div>
+  <h3>Eldritch Invocations</h3>
+  <ul>
+    <% EldritchInvocation.all.order(:name).each do |i| %>
+    <li><%= link_to i.name, eldritch_invocation_path(i.id) %>
+      <ul>
+        <% unless i.preq.empty? %><li><b>Prerequisite:</b> <%= i.preq %></li><% end %>
+        <li><b>Description:</b> <%= i.description %></li>
+      </ul>
+    </li>
+    <% end %>
   </ul>
 </div>
 <% end %>

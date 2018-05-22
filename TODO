@@ -15,15 +15,14 @@ Models
 	CustomClassLeveling
 	CustomFeature
 	CustomSpell
+	CustomEldritchInvocation
 
 Add Content to (assume all unless listed otherwise)
         Features
 		Done in parallel with charpath and charlevel
 	CharPath
-                Warlock
                 Wizard
 	CharLevel
-                Warlock
                 Wizard
 	Gear
 		Need to think this out

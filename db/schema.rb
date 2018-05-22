@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180306214934) do
+ActiveRecord::Schema.define(version: 20180522141159) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -180,6 +180,12 @@ ActiveRecord::Schema.define(version: 20180306214934) do
     t.bigint "realm_id"
     t.index ["alignment_id"], name: "index_deities_on_alignment_id"
     t.index ["realm_id"], name: "index_deities_on_realm_id"
+  end
+
+  create_table "eldritch_invocations", force: :cascade do |t|
+    t.string "name"
+    t.string "description"
+    t.string "preq"
   end
 
   create_table "equipment_types", force: :cascade do |t|

@@ -13,6 +13,7 @@ class CreateSpells < ActiveRecord::Migration[5.1]
       t.string :range_unit
       t.json :table
       t.json :materials
+      t.integer :classes, array:true
     end
   end
 end

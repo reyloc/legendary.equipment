@@ -308,6 +308,7 @@ ActiveRecord::Schema.define(version: 20180522141159) do
     t.string "range_unit"
     t.json "table"
     t.json "materials"
+    t.integer "classes", array: true
   end
 
   create_table "tools", force: :cascade do |t|

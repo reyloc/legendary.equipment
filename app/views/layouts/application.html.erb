@@ -24,7 +24,6 @@
         </div>
         <div id="bs-example-navbar-collapse-1" class="collapse navbar-collapse">
           <ul class='nav navbar-nav navbar-left'>
-            <% if user_signed_in? %><li><a href='#'>Chat</a></li><% end %>
             <li><a href='#'>Forum</a></li>
             <li class='dropdown'>
               <a class='dropdown-toggle' data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" href='#'>
@@ -56,10 +55,22 @@
             </li>
             <li class='dropdown'>
               <a class='dropdown-toggle' data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" href='#'>
+              Rules
+                <span class="caret"></span>
+              </a>
+              <ul class='dropdown-menu'>
+                <li><a href='#'>Stuff</a></li>
+                <li><a href='#'>and</a></li>
+                <li><a href='#'>Things</a></li>
+              </ul>
+            </li>
+            <li class='dropdown'>
+              <a class='dropdown-toggle' data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" href='#'>
                 Tools
                 <span class="caret"></span>
               </a>
               <ul class='dropdown-menu'>
+                <% if user_signed_in? %><li><a href='#'>Chat</a></li><% end %>
                 <% if user_signed_in? %><li><a href='#'>Map</a></li><% end %>
                 <li><%= link_to 'Name Generator', name_gen_index_path() %></li>
               </ul>

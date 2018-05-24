@@ -184,3 +184,26 @@
   </ul>
 </div>
 <% end %>
+<% unless @spells.empty? %>
+<div class='attribute-border'></div>
+<div>
+  <h3><%= @charclass.name %> Spells</h3>
+  <ul>
+    <% current_level = nil %>
+    <% @spells.each do |spell| %>
+      <% if current_level == spell.level %>
+        <li><%= link_to spell.name, spell_path(spell.id) %></li>
+      <% else %>
+        <% current_level = spell.level %>
+        <% if current_level == 0 %>
+        <% else %>
+        </ul></li>
+        <% end %>
+        <li><%= current_level == 0 ? 'Cantrips' : "#{current_level} Level Spells" %><ul>
+        <li><%= link_to spell.name, spell_path(spell.id) %></li>
+        <% current_level = spell.level %>
+      <% end %>
+    <% end %>
+  </ul>
+</div>
+<% end %>

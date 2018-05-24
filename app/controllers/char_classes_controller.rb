@@ -11,5 +11,6 @@ class CharClassesController < ApplicationController
     @paths = ClassPath.where(:char_class_id => @charclass.id).order(:name)
     @skills = Skill.all
     @features = Feature.where(:class_id => @charclass.id).order(:name)
+    @spells = Spell.where("#{params[:id]} = ANY(classes)").order(:level, :name)
   end
 end

@@ -11,17 +11,13 @@
     <li>Range: <%= @spell.range %> <%= @spell.range_unit %></li>
     <li>Duration: <%= @spell.duration %></li>
     <li>Components: <%= @spell.components.map {|c| Component.find(c).name}.join(', ') %></li>
-    <% if @spell.components.include? '3' %>
+    <% if @spell.components.include? 3 %>
       <li>Materials Needed:<ul>
         <% @spell.materials.to_h['items'].each do |material| %>
-          <% if material['quantity'].is_a? 'Array' %>
-            <li>
-              <% material['quantity'].each_with_index do |q, i| %>
-                <%= q %> <%= material['choices'][i] %> <%= i == material['quantity'].length-1 ? '' : ' or ' %>
-              <% end %>
-            </li>
+          <% if material.last.is_a? Array %>
+             <li><%= material.last.map{|m|"#{material.first} #{m}"}.join(' OR ') %></li>
           <% else %>
-            <li><%= material['quantity'] %> <% material['choices'].join(' or ') %></li>
+            <li><%= material.first %> <%= material.last %></li>
           <% end %>
         <% end %>
       </ul></li>

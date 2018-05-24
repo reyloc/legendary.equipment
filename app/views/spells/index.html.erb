@@ -1,8 +1,37 @@
 <h1>Spells</h1>
+<% schools = [] %>
+<% @spells.each{|s|schools.push(s.spell_type)} %>
+<div class='form-group row'>
+  <div class='col-sm-3'></div>
+  <label for='filter' class='col-sm-2 col-form-label' style='line-height:35px;'>Apply Filter</label>
+  <div class='col-sm-4'>
+    <select class='form-control' id='filter' name='filter' autocomplete='off'>
+      <option value='all'>Show all Spells</option>
+      <% schools.uniq.sort.each do |school| %>
+      <option value='<%= school %>'>Show all <%= school %> spells</option>
+      <% end %>
+      <% 1.upto(9) do |i| %>
+      <option value='<%= i %>'>Show all <%= i.ordinalize %> level spells</option>
+      <% end %>
+      <% @classes.each do |c| %>
+      <option value='<%= c.name.delete(' ') %>'>Show all <%= c.name %> spells</option>
+      <% end %>
+    </select>
+  </div>
+</div>
 <div>
   <ul>
     <% @spells.each do |spell| %>
-      <li><%= link_to spell.name, spell_path(spell.id) %></li>
+      <% sc = ["all", spell.spell_type, spell.level] %>
+      <li class='<%= sc.join(' ') %> <%= spell.classes.map{|c|@classes[c-1].name.delete(' ')}.join(' ') %>'>
+        <%= link_to spell.name, spell_path(spell.id) %>
+      </li>
     <% end %>
   </ul>
 </div>
+<script type='text/javascript'>
+  $('#filter').on('change', function() {
+    $('.all').hide();
+    $('.' + this.value).show();
+  });
+</script>
